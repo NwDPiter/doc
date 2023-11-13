@@ -1,5 +1,5 @@
 
-## Configurando um Switch
+## **Configurando um Switch**
 
 0º- Entra no modo 'root' e no modo de configuração 
 
@@ -58,7 +58,7 @@
 
 
 
-## Configurando um Roteador
+## **Configurando um Roteador**
 
 
 São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
@@ -85,7 +85,7 @@ São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
 
     show ip interface brief
 
-## Configurando o ssh
+## **Configurando o ssh**
 
 1º - Coloca um nome para o ip (DNS)
 
