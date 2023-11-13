@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nwdpiter.github.io/doc/</loc>
-         <lastmod>2023-11-11</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Config_Roteador-e-Switch_Cisco/</loc>
-         <lastmod>2023-11-11</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Docker-e-Vagrant/</loc>
-         <lastmod>2023-11-11</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/ISA_Introdu%C3%A7%C3%A3o-ao-linux/</loc>
-         <lastmod>2023-11-11</lastmod>
+         <lastmod>2023-11-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
