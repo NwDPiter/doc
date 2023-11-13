@@ -1,12 +1,14 @@
 
 ## Configurando um Switch
 
-0º- Entra no modo 'root'
+0º- Entra no modo 'root' e no modo de configuração 
 
     User simples = Name>
     User Super = Name#
 
-    enable
+    enable = acessa modo 'root'
+
+    configura terminal = Entra no modo de configurações
 
 1º - Alterar nome do roteador 
    
