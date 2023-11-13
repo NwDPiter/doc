@@ -390,29 +390,29 @@ enable = acessa modo 'root'
 
 configura terminal = Entra no modo de configurações
 </code></pre>
-<p>1º - Alterar nome do roteador </p>
+<p>1º - Alterar nome da sua maquina <em>(Opiconal)</em></p>
 <pre><code>hostname nome
 
     EX: hostname R1 : altera o nome do roteador para R1
 </code></pre>
 <p>2º - Adiciona senha para acessar o console</p>
 <pre><code>line console 0
- |- password 'senha'
+ |- password senha
  |- - login
 </code></pre>
 <p>3º - Protege o modo privilegiado (#)</p>
-<pre><code>enable secret 'senha'
+<pre><code>enable secret senha
 </code></pre>
 <p>4º - protege conexões ssh/tealnet</p>
 <pre><code>line vty 0 15           seleciona as 16 vty(Virtual Terminal Lines) usadas para conexões ssh
- |- password 'senha'
+ |- password senha
  |- - login
 </code></pre>
 <p>5º - Criptografa as senhas</p>
 <pre><code>    service password-encryption
 </code></pre>
 <p>6º - Coloca um banner ao logar no Switch</p>
-<pre><code>banner motd '#mensagem#'
+<pre><code>banner motd #mensagem#
 </code></pre>
 <p>7º - Configura a interface do Switch</p>
 <pre><code>interface vlan 1,2,3... quantas tiver escolha uma
@@ -427,23 +427,32 @@ configura terminal = Entra no modo de configurações
 <pre><code>ip default-gateway ip
 </code></pre>
 <h2 id="configurando-um-roteador"><strong>Configurando um Roteador</strong></h2>
-<p>São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6</p>
+<p>0º - Entre no modo root usando o '<em>enable</em>'</p>
+<p>Ficara assim:
+[<a href="https://im.ge/i/AQKrmM"><img alt="Router#" src="https://i.im.ge/2023/11/13/AQKrmM.Router.png" /></a>]</p>
+<p>Ao entra no modo de configuração de terminal usando '<em>configure terminal</em>' </p>
+<p>Ficara assim:
+[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />]</p>
 <p>1º - Configurando a interface de rede</p>
 <pre><code>interface tipo nº/nº
 
     EX: interface gigabitethernet 0/1
 </code></pre>
-<p>2º - Descrição para interface</p>
-<pre><code>description 'texto'
-</code></pre>
-<p>3º - Enderaça a interface  </p>
+<p>Ficara assim:
+[<a href="https://im.ge/i/AQKuWY"><img alt="config-if" src="https://i.im.ge/2023/11/13/AQKuWY.config-if.png" /></a>]</p>
+<p>2º - Enderaça a interface  </p>
 <pre><code>ip address ip mask
+
+EX: ip address 192.168.0.1 255.255.255.0
 </code></pre>
-<p>4º - Reinicia</p>
+<p>3º - Reinicia</p>
 <pre><code>no shutdown
 </code></pre>
-<p>5º - Verifica as config de interface</p>
+<p>4º - Verifica as configurações de interface</p>
 <pre><code>show ip interface brief
+</code></pre>
+<p>5º - Descrição para interface  (Opicional)</p>
+<pre><code>description 'texto'
 </code></pre>
 <h2 id="configurando-o-ssh"><strong>Configurando o ssh</strong></h2>
 <p>1º - Coloca um nome para o ip (DNS)</p>
