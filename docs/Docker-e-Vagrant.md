@@ -1,7 +1,7 @@
 # Comandos do Docker e Vagrant
 
 
-# Docker
+# **Docker**
 
 1º - Cria um arquivo Dockerfile e dentro dele será feito as configurações do seu container opções mais usadas
 
@@ -132,7 +132,7 @@ O ip da máquina real se torna do docker
 **-------------------------------------------------------------------------------------------------------------**
 
 
-# Vagrant
+# **Vagrant**
 
 Trabalha em conjunto com o docker,Virtual Box e entre outros
 

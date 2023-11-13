@@ -10,7 +10,7 @@
 
     configura terminal = Entra no modo de configurações
 
-1º - Alterar nome do roteador 
+1º - Alterar nome da sua maquina *(Opiconal)*
    
     hostname nome
 
@@ -19,17 +19,17 @@
 2º - Adiciona senha para acessar o console
 
     line console 0
-     |- password 'senha'
+     |- password senha
      |- - login
 
 3º - Protege o modo privilegiado (#)
 
-    enable secret 'senha'
+    enable secret senha
 
 4º - protege conexões ssh/tealnet
 
     line vty 0 15           seleciona as 16 vty(Virtual Terminal Lines) usadas para conexões ssh
-     |- password 'senha'
+     |- password senha
      |- - login
 
 5º - Criptografa as senhas
@@ -38,7 +38,7 @@
 
 6º - Coloca um banner ao logar no Switch
 
-    banner motd '#mensagem#'
+    banner motd #mensagem#
 
 7º - Configura a interface do Switch
 
@@ -61,7 +61,16 @@
 ## **Configurando um Roteador**
 
 
-São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
+0º - Entre no modo root usando o '*enable*'
+
+Ficara assim:
+[[![Router#](https://i.im.ge/2023/11/13/AQKrmM.Router.png)](https://im.ge/i/AQKrmM)]
+
+Ao entra no modo de configuração de terminal usando '*configure terminal*' 
+
+Ficara assim:
+[![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)]
+
 
 1º - Configurando a interface de rede
 
@@ -69,21 +78,27 @@ São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
 
         EX: interface gigabitethernet 0/1 
 
-2º - Descrição para interface
+Ficara assim:
+[[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](https://im.ge/i/AQKuWY)]
 
-    description 'texto'
-
-3º - Enderaça a interface  
+2º - Enderaça a interface  
     
     ip address ip mask
 
-4º - Reinicia
+    EX: ip address 192.168.0.1 255.255.255.0
+
+3º - Reinicia
 
     no shutdown
 
-5º - Verifica as config de interface
+4º - Verifica as configurações de interface
 
     show ip interface brief
+
+5º - Descrição para interface  (Opicional)
+
+    description 'texto'
+
 
 ## **Configurando o ssh**
 

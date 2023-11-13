@@ -14,8 +14,6 @@ pipe | : Permite pegar a saída do um comando e direcionar para o próximo
 
     -r: Inverte qualquer tipo de classificação
 
-**exa -gl:** ls colorido
-
 **cd :** Usado para acessar outros diretórios
 
 **touch :** cria um arquivo
@@ -38,7 +36,7 @@ pipe | : Permite pegar a saída do um comando e direcionar para o próximo
 
 **rmdir :** remove directory
 
-**man e o comando :** command about description
+**man comando :** help do comando
 
 **cp nome\_do\_arquivo + destino/ :** cópia de um lugar para outro
 
@@ -52,29 +50,33 @@ pipe | : Permite pegar a saída do um comando e direcionar para o próximo
 
     -l: linhas
 
-**find, local de busca, -name , nome\_do\_arquivo:** procurar arquivos no disco rígido por nome
+**find local de busca -name  nome\_do\_arquivo:** procurar arquivos no disco rígido por nome
 
 **head:** pega as 10 primeiras linhas (pro padrão,mas pode ser mais) do arquivo
 
-    head -número_linhas local do arquivo
+    head -número_linhas local/do/arquivo
 
 **tail** pega as 10 ultimas linhas de um arquivo
 
-    tail -número_linhas local do arquivo
+    tail -número_linhas local/do/arquivo
 
-**sort :** deixar em ordem alfabética, -r (inverte a ordem alfabética)
+Utilizados para saídas de comandos
 
-**nl (number line) :** enumera as linha de um arquivo
+    sort : deixar em ordem alfabética, -r (inverte a ordem alfabética)
 
-**cut  -d[O que vai separar] -f [posição/coluna]:**  Filtra os nomes exato procurado
+    nl (number line) : enumera as linha de um arquivo
 
-**ln [opção (-b ou -s simbólico)]  caminho nome do link :** cria atalhos para files ou directory
+    cut  -d[O que vai separar] -f [posição/coluna]:  Filtra os nomes exato procurado
+
+    ln [opção (-b ou -s simbólico)]  caminho nome do link : cria atalhos para files ou directory
 
 **echo ‘msg’:** envia uma mensagem para o terminal
 
-**which:** procura por comando em diretórios
+**which comando:** procura por comando em diretórios
 
 **./ nome_arquivo:** executa um arquivo
+    
+    Verifique se o arquivo tem permissão para executar,se não, altere vendo a sessão de Alteração de permissões
 
 **lt:** less than (menor que)
 
@@ -379,9 +381,17 @@ E um sistema de :multitarefa, multiusuário, conexão com outros tipos de sistem
 
     -v(Descreve as alterações de atributos)
 
-**chmod +(adiciona permissão)rwx:** Adiciona permissão
+**chmod +rwx:** Adiciona permissão
 
-**chmod -(retira permissões)rwx:** Retirar permissões
+    r = read = ler
+    w = write = escrever
+    x = executar
+
+**chmod -rwx:** Retirar permissões
+
+    se você quer tirar a permissão de executar um arquivo use:
+
+    EX: chmod -x nome-do-arquivo
 
 **chown novodono.grupo arquivo:**  altera o dono do arquivo
 

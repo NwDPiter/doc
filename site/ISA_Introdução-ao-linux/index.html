@@ -535,7 +535,6 @@
 
 -r: Inverte qualquer tipo de classificação
 </code></pre>
-<p><strong>exa -gl:</strong> ls colorido</p>
 <p><strong>cd :</strong> Usado para acessar outros diretórios</p>
 <p><strong>touch :</strong> cria um arquivo</p>
 <p><strong>mkdir[-p,-m] :</strong> Cria um diretório</p>
@@ -549,7 +548,7 @@
 <p><strong>mv:</strong> move ou renomeia arquivos e diretórios</p>
 <p><strong>diff  [arquivo] [arquivo]:</strong> Faz a comparação entre arquivos</p>
 <p><strong>rmdir :</strong> remove directory</p>
-<p><strong>man e o comando :</strong> command about description</p>
+<p><strong>man comando :</strong> help do comando</p>
 <p><strong>cp nome_do_arquivo + destino/ :</strong> cópia de um lugar para outro</p>
 <p><strong>mv :</strong> Move ou renomeia arquivos de diretórios</p>
 <p><strong>wc [-c,-w,-l] Arquivo :</strong> conta a quantidade de caracteres,palavras e linhas</p>
@@ -559,20 +558,27 @@
 
 -l: linhas
 </code></pre>
-<p><strong>find, local de busca, -name , nome_do_arquivo:</strong> procurar arquivos no disco rígido por nome</p>
+<p><strong>find local de busca -name  nome_do_arquivo:</strong> procurar arquivos no disco rígido por nome</p>
 <p><strong>head:</strong> pega as 10 primeiras linhas (pro padrão,mas pode ser mais) do arquivo</p>
-<pre><code>head -número_linhas local do arquivo
+<pre><code>head -número_linhas local/do/arquivo
 </code></pre>
 <p><strong>tail</strong> pega as 10 ultimas linhas de um arquivo</p>
-<pre><code>tail -número_linhas local do arquivo
+<pre><code>tail -número_linhas local/do/arquivo
 </code></pre>
-<p><strong>sort :</strong> deixar em ordem alfabética, -r (inverte a ordem alfabética)</p>
-<p><strong>nl (number line) :</strong> enumera as linha de um arquivo</p>
-<p><strong>cut  -d[O que vai separar] -f [posição/coluna]:</strong>  Filtra os nomes exato procurado</p>
-<p><strong>ln [opção (-b ou -s simbólico)]  caminho nome do link :</strong> cria atalhos para files ou directory</p>
+<p>Utilizados para saídas de comandos</p>
+<pre><code>sort : deixar em ordem alfabética, -r (inverte a ordem alfabética)
+
+nl (number line) : enumera as linha de um arquivo
+
+cut  -d[O que vai separar] -f [posição/coluna]:  Filtra os nomes exato procurado
+
+ln [opção (-b ou -s simbólico)]  caminho nome do link : cria atalhos para files ou directory
+</code></pre>
 <p><strong>echo ‘msg’:</strong> envia uma mensagem para o terminal</p>
-<p><strong>which:</strong> procura por comando em diretórios</p>
+<p><strong>which comando:</strong> procura por comando em diretórios</p>
 <p><strong>./ nome_arquivo:</strong> executa um arquivo</p>
+<pre><code>Verifique se o arquivo tem permissão para executar,se não, altere vendo a sessão de Alteração de permissões
+</code></pre>
 <p><strong>lt:</strong> less than (menor que)</p>
 <p><strong>gt:</strong> greater than (maior que)</p>
 <p><strong>eq:</strong> equal (igual)</p>
@@ -767,8 +773,16 @@ NP: Indica que não há senha
 
 -v(Descreve as alterações de atributos)
 </code></pre>
-<p><strong>chmod +(adiciona permissão)rwx:</strong> Adiciona permissão</p>
-<p><strong>chmod -(retira permissões)rwx:</strong> Retirar permissões</p>
+<p><strong>chmod +rwx:</strong> Adiciona permissão</p>
+<pre><code>r = read = ler
+w = write = escrever
+x = executar
+</code></pre>
+<p><strong>chmod -rwx:</strong> Retirar permissões</p>
+<pre><code>se você quer tirar a permissão de executar um arquivo use:
+
+EX: chmod -x nome-do-arquivo
+</code></pre>
 <p><strong>chown novodono.grupo arquivo:</strong>  altera o dono do arquivo</p>
 <p><strong>chgrp novogrupo arquivo :</strong> altera o grupo do arquivo</p>
 <p><strong>644 </strong>: permissão padrão do arquivo</p>
