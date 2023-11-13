@@ -52,7 +52,7 @@
 
     copy running-config startup-config
 
-9º - Artibui um gateway padrão
+9º - Atribuir um gateway padrão para o switch
 
     ip default-gateway ip
 
