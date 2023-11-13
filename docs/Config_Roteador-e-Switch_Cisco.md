@@ -1,6 +1,13 @@
 
 ## Configurando um Switch
 
+0º- Entra no modo 'root'
+
+    User simples = Name>
+    User Super = Name#
+
+    enable
+
 1º - Alterar nome do roteador 
    
     hostname nome
