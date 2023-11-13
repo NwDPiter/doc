@@ -2,7 +2,7 @@
 
 No momento há apenas sobre
 
-    1º- Docker e Vagrant
+    1º- Comandos Docker e Vagrant
 
     2º- Comandos iniciais do linux
 
