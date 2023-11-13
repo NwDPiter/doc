@@ -81,8 +81,12 @@ São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
 
     Ligar = no shutdown
     Desligar = shutdown
-    
-5º - Adiciona rotas ao roteador
+
+5º - Verifica as config de interface
+
+    show ip interface brief
+   
+6º - Adiciona rotas ao roteador
 
     ip route destino mascara prox_salto [metrica]
 
@@ -93,9 +97,9 @@ São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
 
         EX: ip route 192.168.1.1  255.255.255.0  10.0.0.4  [2]
 
-6º - Verifica as config de interface
+7º - Verifica as rotas do roteador 
 
-    show ip interface brief
+    show ip route
 
 ## **Configurando o ssh**
 
