@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://nwdpiter.github.io/doc/Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/">
       
       
-        <link rel="prev" href="../../ISA_Introdu%C3%A7%C3%A3o-ao-linux/">
+        <link rel="prev" href="../../Analisando-redes/NMAP/">
       
       
         <link rel="next" href="../2%C2%BA-%20Instalando%20o%20WP-CLI/">
@@ -266,6 +266,69 @@
       
   
   
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analisando redes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Analisando redes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analisando-redes/NMAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NMAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -279,10 +342,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -293,8 +356,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
           </label>
@@ -356,8 +419,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#utilizando-o-comando" class="md-nav__link">
-    Utilizando o comando
+  <a href="#utilizando-o-comando-para-instalacao" class="md-nav__link">
+    Utilizando o comando para instalação
   </a>
   
 </li>
@@ -402,11 +465,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../3%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
+      <a href="../3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    3º  Instalando o Code Server
+    3º  Configurando user e WP
   </span>
   
 
@@ -442,11 +505,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../5%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
+      <a href="../5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5º  Configurando user e WP
+    5º  Instalando o Code Server
   </span>
   
 
@@ -516,26 +579,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Inicial/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bem vindo a documentação
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -576,8 +619,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#utilizando-o-comando" class="md-nav__link">
-    Utilizando o comando
+  <a href="#utilizando-o-comando-para-instalacao" class="md-nav__link">
+    Utilizando o comando para instalação
   </a>
   
 </li>
@@ -605,7 +648,7 @@
   <h1>1º  Instalando o LAMP</h1>
 
 <ul>
-<li>Nessa primeira etapa e feita as instalações das dependências para o nosso site, conhecida como LAMP. Além des dependências precisaremos do curl para baixar o WP-CLI.</li>
+<li>Nessa primeira etapa e feita as instalações das dependências para o nosso site, conhecida como LAMP. Além des dependências precisaremos do curl para baixar o WP-CLI e o mkdocs para documentar o nosso site.</li>
 </ul>
 <h2 id="pacotes">PACOTES</h2>
 <pre><code>- apache2
@@ -614,9 +657,10 @@
 - libapache2-mod-php
 - php-mysql
 - curl
+- mkdocs-*
 </code></pre>
-<h3 id="utilizando-o-comando">Utilizando o comando</h3>
-<pre><code>  apt install -y apache2 php mariadb-server libapache2-mod-php php-mysql curl
+<h3 id="utilizando-o-comando-para-instalacao">Utilizando o comando para instalação</h3>
+<pre><code>  apt install -y apache2 php mariadb-server libapache2-mod-php php-mysql curl mkdocs-*
 </code></pre>
 
 
