@@ -1,4 +1,7 @@
+**OBS**: Essa documentação e para fins didáticos
+
 Utilitarios do NMAP
+
 
 Envia um ping para todos da rede e retorna se esta ativo ou não 
 
@@ -30,13 +33,13 @@ Para escanear portas específicas em um host.
 
         Ex: nmap -p 80,443 192.168.1.100
 
-    Este comando irá verificar se as portas 80 e 443 estão abertas no host 192.168.1.100.
+    Este comando irá verificar se as portas 80 e 443 estão abertas no host 192.168.1.100
 
 Para obter mais informações sobre as portas abertas em um host.
 
     nmap -sV [endereço IP do host]
 
-    EX: nmap -sV 192.168.1.100
+        EX: nmap -sV 192.168.1.100
 
     Este comando irá verificar se as portas abertas no host estão mapeadas para serviços específicos.
 
@@ -44,10 +47,14 @@ Para escanear uma rede para vulnerabilidades.
 
     nmap -sV -sC [endereço IP da rede]
 
+        EX: nmap -sV -sC 192.168.1.100
+
     Este comando irá verificar se as portas abertas na rede estão mapeadas para serviços vulneráveis.
 
 Para obter mais informações sobre as vulnerabilidades encontradas.
 
     nmap -sV -sC -oX [arquivo de saída] [endereço IP da rede]
+
+        EX: nmap -sV -sC -oX arquivo.txt 192.168.1.100
 
     Este comando irá gerar um relatório XML com informações sobre as vulnerabilidades encontradas.

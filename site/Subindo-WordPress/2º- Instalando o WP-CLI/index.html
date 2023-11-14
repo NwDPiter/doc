@@ -14,7 +14,7 @@
         <link rel="prev" href="../1%C2%BA-%20Instalando%20o%20LAMP/">
       
       
-        <link rel="next" href="../3%C2%BA-%20Instalando%20o%20Code-Server/">
+        <link rel="next" href="../3%C2%BA-%20Configurando%20user%20e%20WP/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -266,6 +266,69 @@
       
   
   
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Analisando redes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Analisando redes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Analisando-redes/NMAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NMAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -279,10 +342,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -293,8 +356,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
           </label>
@@ -375,8 +438,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instale-o-wp-cli-usando-o-curl" class="md-nav__link">
-    Instale o WP-CLI usando o curl
+  <a href="#instalacao" class="md-nav__link">
+    Instalação
   </a>
   
 </li>
@@ -417,11 +480,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../3%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
+      <a href="../3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    3º  Instalando o Code Server
+    3º  Configurando user e WP
   </span>
   
 
@@ -457,11 +520,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../5%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
+      <a href="../5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    5º  Configurando user e WP
+    5º  Instalando o Code Server
   </span>
   
 
@@ -531,26 +594,6 @@
 
               
             
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Inicial/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Bem vindo a documentação
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -590,8 +633,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instale-o-wp-cli-usando-o-curl" class="md-nav__link">
-    Instale o WP-CLI usando o curl
+  <a href="#instalacao" class="md-nav__link">
+    Instalação
   </a>
   
 </li>
@@ -640,23 +683,11 @@
 <h3 id="entre-no-diretorio">Entre no diretório</h3>
 <pre><code> cd  /usr/local/bin
 </code></pre>
-<h3 id="instale-o-wp-cli-usando-o-curl">Instale o WP-CLI usando o curl</h3>
-<ul>
-<li>
-<p>Para instalar o code-server vamos utilizar o seguinte comando:</p>
-<p>curl -fsSL https://code-server.dev/install.sh | sh</p>
-</li>
-</ul>
+<h3 id="instalacao">Instalação</h3>
 </li>
 <li>
-<p>Após a instalação vamos configurar.</p>
-<pre><code>Utilizando o usuário criado na etapa do WP-CLI vamos entrar no seguinte arquivo para edição
-usando seu editor preferido (no meu caso e o VIM) entre em:
-
-OBS: user=Seu usuário criado
-</code></pre>
-<p>…</p>
-<pre><code> curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+<p>Para instalar o WP-CLI vamos utilizar o seguinte comando:</p>
+<pre><code>  curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 </code></pre>
 <h3 id="altere-o-nome-do-comando">Altere o nome do comando</h3>
 <pre><code> mv wp-cli.phar wp

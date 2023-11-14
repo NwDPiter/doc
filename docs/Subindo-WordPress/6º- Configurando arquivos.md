@@ -8,10 +8,18 @@
 
     -   Alterar o Documentroot para o seu diretório do seu site 
 	-   Ex: Documentroot:  /var/www/diretório_do_site
+    -   Altere o NameServer para o url que você deseja para o seu site
+    -   EX: NameServer www.exemplo.com
 
+
+Ficara assim no www.conf:   **FALTA FOTO**
+
+    
 ###OBS: No caso da criação de um site usando o (mkdocs) o documentroot apontara dessa forma.
 
     -   Ex: Documentroot:  /var/www/docs/site
+
+Ficara assim no docs.conf:   **FALTA FOTO**
 
 ###Fazer um link de (www.conf e docs.conf) para /etc/apache2/sites-enabled.
 

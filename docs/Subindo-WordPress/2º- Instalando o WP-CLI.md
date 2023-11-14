@@ -1,32 +1,24 @@
 -   Fazendo a instalação do WP-CLI e dando permissão.
 
-    ###Entre no diretório
+    ### Entre no diretório
 
          cd  /usr/local/bin
-    ###Instale o WP-CLI usando o curl 
--   Para instalar o code-server vamos utilizar o seguinte comando:
 
-        curl -fsSL https://code-server.dev/install.sh | sh
+    ### Instalação
 
--    Após a instalação vamos configurar.
+-   Para instalar o WP-CLI vamos utilizar o seguinte comando:
+       
+          curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 
-        Utilizando o usuário criado na etapa do WP-CLI vamos entrar no seguinte arquivo para edição
-        usando seu editor preferido (no meu caso e o VIM) entre em:
-
-        OBS: user=Seu usuário criado
-…
-            
-
-         curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-    ###Altere o nome do comando 
+    ### Altere o nome do comando 
 
          mv wp-cli.phar wp
 
-    ###De permissão ao WP-CLI 
+    ### De permissão ao WP-CLI 
 
          chmod  +x  wp
 
-###Criando usuário para manipular o WP
+### Criando usuário para manipular o WP
 
           useradd -m -s /bin/bash nome_user	
 

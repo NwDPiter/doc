@@ -60,6 +60,17 @@
 
 ## **Configurando um Roteador**
 
+São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
+
+0º - Entre no modo root usando o '*enable*'
+
+Ficara assim:
+[[![Router#](https://i.im.ge/2023/11/13/AQKrmM.Router.png)](https://im.ge/i/AQKrmM)]
+
+Ao entra no modo de configuração de terminal usando '*configure terminal*' 
+
+Ficara assim:
+[![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)]
 
 São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
 
@@ -68,6 +79,9 @@ São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
     interface tipo nº/nº
 
         EX: interface gigabitethernet 0/1 
+
+Ficara assim:
+[[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](https://im.ge/i/AQKuWY)]
 
 2º - Descrição para interface
 
