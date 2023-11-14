@@ -72,15 +72,14 @@ Ao entra no modo de configuração de terminal usando '*configure terminal*'
 Ficara assim:
 [![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)]
 
-São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
 
 1º - Configurando a interface de rede
 
     interface tipo nº/nº
 
         EX: interface gigabitethernet 0/1 
-
-Ficara assim:
+        
+Ao entra na interface ficara assim:
 [[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](https://im.ge/i/AQKuWY)]
 
 2º - Descrição para interface
