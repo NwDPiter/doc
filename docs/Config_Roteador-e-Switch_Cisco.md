@@ -55,8 +55,7 @@
 9º - Atribuir um gateway padrão para o switch
 
     ip default-gateway ip
-
-
+    
 
 ## **Configurando um Roteador**
 
@@ -133,6 +132,12 @@ Nesse modo:[[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](http
     ipv6 route IPv6/Mascara  ip_destino metrica
 
         EX: ipv6 route 2001:0DB8:AAAA::0/64  2001:0DB8:BBBB::1  1     
+
+11º - Salva as configurações
+
+Estando nesso modo:[![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)] use:
+
+    write
 
 ## **Configurando o ssh**
 
