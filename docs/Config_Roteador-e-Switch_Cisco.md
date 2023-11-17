@@ -114,6 +114,26 @@ Ao entra na interface ficara assim:
 
     show ip route
 
+8º - Habilitar a função de roteamento unicast IPv6
+
+Nesse modo:[![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)] use o comando:
+
+    ipv6 unicast-routing
+
+9º - Configurar a interface de rede com um endereço IPv6
+
+Nesse modo:[[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](https://im.ge/i/AQKuWY)] use o comando:
+
+    ipv6 address IPV6/Mascara
+
+        EX: ipv6 address 2001:0DB8:AAAA::1/64
+
+10º - Adiciona rotas em IPV6
+
+    ipv6 route IPv6/Mascara  ip_destino metrica
+
+        EX: ipv6 route 2001:0DB8:AAAA::0/64  2001:0DB8:BBBB::1  1     
+
 ## **Configurando o ssh**
 
 1º - Coloca um nome para o ip (DNS)
