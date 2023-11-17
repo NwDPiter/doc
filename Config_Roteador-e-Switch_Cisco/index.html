@@ -733,6 +733,21 @@ metrica = Por quantos roteadores o pacote irá passar
 <p>7º - Verifica as rotas do roteador </p>
 <pre><code>show ip route
 </code></pre>
+<p>8º - Habilitar a função de roteamento unicast IPv6</p>
+<p>Nesse modo:[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />] use o comando:</p>
+<pre><code>ipv6 unicast-routing
+</code></pre>
+<p>9º - Configurar a interface de rede com um endereço IPv6</p>
+<p>Nesse modo:[<a href="https://im.ge/i/AQKuWY"><img alt="config-if" src="https://i.im.ge/2023/11/13/AQKuWY.config-if.png" /></a>] use o comando:</p>
+<pre><code>ipv6 address IPV6/Mascara
+
+    EX: ipv6 address 2001:0DB8:AAAA::1/64
+</code></pre>
+<p>10º - Adiciona rotas em IPV6</p>
+<pre><code>ipv6 route IPv6/Mascara  ip_destino metrica
+
+    EX: ipv6 route 2001:0DB8:AAAA::0/64  2001:0DB8:BBBB::1  1
+</code></pre>
 <h2 id="configurando-o-ssh"><strong>Configurando o ssh</strong></h2>
 <p>1º - Coloca um nome para o ip (DNS)</p>
 <pre><code>ip domain-name 'nome'
