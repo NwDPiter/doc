@@ -8,25 +8,23 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Config_Roteador-e-Switch_Cisco/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Utilit%C3%A1rios-redes/Proxy-Squid/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../NMAP/">
       
       
-        <link rel="next" href="../Docker-e-Vagrant/">
       
-      
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.8">
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
     
     
       
-        <title>Config Roteador e Switch Cisco - Documentações</title>
+        <title>Proxy Squid - Documentações</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4b4a2bd9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fad675c6.min.css">
       
       
 
@@ -45,7 +43,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configurando-um-switch" class="md-skip">
+        <a href="#instalando" class="md-skip">
           Skip to content
         </a>
       
@@ -83,7 +81,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Documentações" class="md-header__button md-logo" aria-label="Documentações" data-md-component="logo">
+    <a href="../.." title="Documentações" class="md-header__button md-logo" aria-label="Documentações" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -103,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Config Roteador e Switch Cisco
+              Proxy Squid
             
           </span>
         </div>
@@ -175,7 +173,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Documentações" class="md-nav__button md-logo" aria-label="Documentações" data-md-component="logo">
+    <a href="../.." title="Documentações" class="md-nav__button md-logo" aria-label="Documentações" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -192,7 +190,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -209,85 +207,9 @@
       
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Config Roteador e Switch Cisco
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Config Roteador e Switch Cisco
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-um-switch" class="md-nav__link">
-    Configurando um Switch
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-um-roteador" class="md-nav__link">
-    Configurando um Roteador
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-o-ssh" class="md-nav__link">
-    Configurando o ssh
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
   
     <li class="md-nav__item">
-      <a href="../Docker-e-Vagrant/" class="md-nav__link">
+      <a href="../../Docker-e-Vagrant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -306,7 +228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ISA_Introdu%C3%A7%C3%A3o-ao-linux/" class="md-nav__link">
+      <a href="../../ISA_Introdu%C3%A7%C3%A3o-ao-linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -334,24 +256,24 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
-    Analisando redes
+    Configurando ativos
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Analisando redes
+            Configurando ativos
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -361,11 +283,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Analisando-redes/NMAP/" class="md-nav__link">
+      <a href="../../Configurando-ativos/Config_Roteador-e-Switch_Cisco/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    NMAP
+    Config Roteador e Switch Cisco
   </span>
   
 
@@ -397,10 +319,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -411,8 +333,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
           </label>
@@ -424,7 +346,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -444,7 +366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subindo-WordPress/3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -484,7 +406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subindo-WordPress/4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -504,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subindo-WordPress/6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -544,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -564,7 +486,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -573,6 +495,145 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utilitários redes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Utilitários redes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../NMAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NMAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Proxy Squid
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Proxy Squid
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -610,22 +671,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configurando-um-switch" class="md-nav__link">
-    Configurando um Switch
+  <a href="#instalando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#configurando-um-roteador" class="md-nav__link">
-    Configurando um Roteador
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-o-ssh" class="md-nav__link">
-    Configurando o ssh
+  <a href="#configurando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando
+    </span>
   </a>
   
 </li>
@@ -645,141 +703,21 @@
                   
 
 
-  <h1>Config Roteador e Switch Cisco</h1>
+  <h1>Proxy Squid</h1>
 
-<h2 id="configurando-um-switch"><strong>Configurando um Switch</strong></h2>
-<p>0º- Entra no modo 'root' e no modo de configuração </p>
-<pre><code>User simples = Name&gt;
-User Super = Name#
+<h2 id="instalando"><strong>Instalando</strong></h2>
+<p>Para instalar o squid no linux utilizamos o comando padrão (Baseados no Debian)</p>
+<pre><code>apt install squid
+</code></pre>
+<p>Durante a instalação será criado várias arquivos e diretórios, entre eles:</p>
+<pre><code>- debian.conf (O nome varia dependendo da distro)
 
-enable = acessa modo 'root'
-
-configura terminal = Entra no modo de configurações
+- access.log
 </code></pre>
-<p>1º - Alterar nome do roteador </p>
-<pre><code>hostname nome
-
-    EX: hostname R1 : altera o nome do roteador para R1
-</code></pre>
-<p>2º - Adiciona senha para acessar o console</p>
-<pre><code>line console 0
- |- password 'senha'
- |- - login
-</code></pre>
-<p>3º - Protege o modo privilegiado (#)</p>
-<pre><code>enable secret 'senha'
-</code></pre>
-<p>4º - protege conexões ssh/tealnet</p>
-<pre><code>line vty 0 15           seleciona as 16 vty(Virtual Terminal Lines) usadas para conexões ssh
- |- password 'senha'
- |- - login
-</code></pre>
-<p>5º - Criptografa as senhas</p>
-<pre><code>    service password-encryption
-</code></pre>
-<p>6º - Coloca um banner ao logar no Switch</p>
-<pre><code>banner motd '#mensagem#'
-</code></pre>
-<p>7º - Configura a interface do Switch</p>
-<pre><code>interface vlan 1,2,3... quantas tiver escolha uma
- |- ip address ip mask
- |- - no shutdown
-</code></pre>
-<p><strong>obs: (no) faz o inverso</strong></p>
-<p>8º - Comando que salva as config</p>
-<pre><code>copy running-config startup-config
-</code></pre>
-<p>9º - Atribuir um gateway padrão para o switch</p>
-<pre><code>ip default-gateway ip
-</code></pre>
-<h2 id="configurando-um-roteador"><strong>Configurando um Roteador</strong></h2>
-<p>São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6</p>
-<p>0º - Entre no modo root usando o '<em>enable</em>'</p>
-<p>Ficara assim:
-[<a href="https://im.ge/i/AQKrmM"><img alt="Router#" src="https://i.im.ge/2023/11/13/AQKrmM.Router.png" /></a>]</p>
-<p>Ao entra no modo de configuração de terminal usando '<em>configure terminal</em>' </p>
-<p>Ficara assim:
-[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />]</p>
-<p>1º - Configurando a interface de rede</p>
-<pre><code>interface tipo nº/nº
-
-    EX: interface gigabitethernet 0/1
-</code></pre>
-<p>Ao entra na interface ficara assim:
-[<a href="https://im.ge/i/AQKuWY"><img alt="config-if" src="https://i.im.ge/2023/11/13/AQKuWY.config-if.png" /></a>]</p>
-<p>2º - Descrição para interface</p>
-<pre><code>description 'texto'
-</code></pre>
-<p>3º - Enderaça a interface  </p>
-<pre><code>ip address ip mask
-</code></pre>
-<p>4º - Ligar e desligar</p>
-<pre><code>Ligar = no shutdown
-Desligar = shutdown
-</code></pre>
-<p>5º - Verifica as config de interface</p>
-<pre><code>show ip interface brief
-</code></pre>
-<p>6º - Adiciona rotas ao roteador</p>
-<pre><code>ip route destino mascara prox_salto [metrica]
-
-Destino = Rede de destino
-Mascara = Mascara da rede de destino
-prox_salto = ip da interface de chagada do roteador de destino
-metrica = Por quantos roteadores o pacote irá passar
-
-    EX: ip route 192.168.1.1  255.255.255.0  10.0.0.4  [2]
-</code></pre>
-<p>7º - Verifica as rotas do roteador </p>
-<pre><code>show ip route
-</code></pre>
-<p>8º - Habilitar a função de roteamento unicast IPv6</p>
-<p>Nesse modo:[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />] use o comando:</p>
-<pre><code>ipv6 unicast-routing
-</code></pre>
-<p>9º - Configurar a interface de rede com um endereço IPv6</p>
-<p>Nesse modo:[<a href="https://im.ge/i/AQKuWY"><img alt="config-if" src="https://i.im.ge/2023/11/13/AQKuWY.config-if.png" /></a>] use o comando:</p>
-<pre><code>ipv6 address IPV6/Mascara
-
-    EX: ipv6 address 2001:0DB8:AAAA::1/64
-</code></pre>
-<p>10º - Adiciona rotas em IPV6</p>
-<pre><code>ipv6 route IPv6/Mascara  ip_destino metrica
-
-    EX: ipv6 route 2001:0DB8:AAAA::0/64  2001:0DB8:BBBB::1  1
-</code></pre>
-<p>11º - Salva as configurações</p>
-<p>Estando nesso modo:[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />] use:</p>
-<pre><code>write
-</code></pre>
-<h2 id="configurando-o-ssh"><strong>Configurando o ssh</strong></h2>
-<p>1º - Coloca um nome para o ip (DNS)</p>
-<pre><code>ip domain-name 'nome'
-</code></pre>
-<p>2º - Gera um par de chaves RSA</p>
-<pre><code>    crypto key generate rsa
-
-Vai perdir um valor de criptografia
-
-    1024
-
-Se caso queria remover essa chave
-
-    crypto key zeroize rsa
-</code></pre>
-<p>3º - Cria um login e senha</p>
-<pre><code>username 'nome' secret 'senha'
-</code></pre>
-<p>4º - Ativa o protocolo e exige login</p>
-<pre><code>line vty 0 15
- |- transport input ssh 
- |- - login local
- |- - - exit
-</code></pre>
-<p>5º - Ativa a versão 2 do ssh </p>
-<pre><code>ip ssh version 2
-    exit
-</code></pre>
+<p>Aqui uma ilustração mostrando seus caminhos (Usando o comando <em>tree</em>)</p>
+<p><a href="https://im.ge/i/A8DjpJ"><img alt="Tree-squid" src="https://i.im.ge/2023/11/22/A8DjpJ.Tree-squid.jpg" /></a></p>
+<h2 id="configurando"><strong>Configurando</strong></h2>
+<p>No arquivo <em>debian.conf</em> será feito nossa acl (Access Control List)</p>
 
 
 
@@ -818,10 +756,10 @@ Se caso queria remover essa chave
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.81fa17fe.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6c14ae12.min.js"></script>
       
     
   </body>
