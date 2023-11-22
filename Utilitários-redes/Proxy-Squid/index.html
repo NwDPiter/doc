@@ -759,7 +759,9 @@
 <p><strong>OBS:</strong> Por padrão o squid nega todo o acesso quando e instalado, para desabilitar vá em:</p>
 <pre><code>-   /etc/squid/squid.conf
 </code></pre>
-<p>proucure a linha que tem http_access <strong>deny</strong> all  e troque para <strong>allow</strong> isso vai permitir acesso para todos os site ou deixar como está e permitir apenas sites específicos no processo de configuração.</p>
+<p>Proucure a linha que tem <em>http_access <strong>deny</strong> all</em> e troque para <strong>allow</strong> isso vai permitir o acesso para todos os site, desse jeito:</p>
+<p><a href="https://im.ge/i/AK3UI4"><img alt="Screenshot_2023-11-22_19-12-37" src="https://i.im.ge/2023/11/23/AK3UI4.Screenshot-2023-11-22-19-12-37.jpg" /></a></p>
+<p>Ou deixar como está e permita apenas os sites específicos no processo de configuração.</p>
 <h2 id="configurando"><strong>Configurando</strong></h2>
 <p>No <em>'debian.conf'</em> será adicionado nossa acl (Access Control List) o padrão de construção é:</p>
 <pre><code>-     acl NOME_DA_ACL TIPO_DA_ACL parâmetro
@@ -798,7 +800,7 @@ allow: Permiti o acesso
 <p>3.Na seção Rede, selecione Configurações de proxy.</p>
 <p>4.Marque a caixa Usar um servidor proxy.</p>
 <p>5.Insira o endereço IP do servidor proxy e a porta.</p>
-<p>(Pode varias entres os navegadores)</p>
+<p>(Pode variar entres os navegadores)</p>
 <h2 id="logs"><strong>Logs</strong></h2>
 <p>Para verificar os logo e simples, lá em cima vimos o arquivo 'access.log' e onde ele fica, para verificar em tempo real use:</p>
 <pre><code>tail -f /var/log/squid/access.log
