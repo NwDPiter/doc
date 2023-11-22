@@ -2,72 +2,77 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nwdpiter.github.io/doc/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Docker-e-Vagrant/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/ISA_Introdu%C3%A7%C3%A3o-ao-linux/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Configurando-ativos/Config_Roteador-e-Switch_Cisco/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Subindo-WordPress/3%C2%BA-%20Configurando%20user%20e%20WP/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Subindo-WordPress/4%C2%BA-%20Criando%20banco%20de%20dados/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Subindo-WordPress/6%C2%BA-%20Configurando%20arquivos/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Utilit%C3%A1rios-redes/NMAP/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nwdpiter.github.io/doc/Utilit%C3%A1rios-redes/Proxy-Squid/</loc>
-         <lastmod>2023-11-21</lastmod>
+         <lastmod>2023-11-22</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://nwdpiter.github.io/doc/Utilit%C3%A1rios-redes/Squid-ACLS/</loc>
+         <lastmod>2023-11-22</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

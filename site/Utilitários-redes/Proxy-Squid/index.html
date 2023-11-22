@@ -14,6 +14,8 @@
         <link rel="prev" href="../NMAP/">
       
       
+        <link rel="next" href="../Squid-ACLS/">
+      
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
@@ -630,10 +632,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Squid-ACLS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ACLS squid
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -688,6 +719,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -716,8 +756,57 @@
 </code></pre>
 <p>Aqui uma ilustração mostrando seus caminhos (Usando o comando <em>tree</em>)</p>
 <p><a href="https://im.ge/i/A8DjpJ"><img alt="Tree-squid" src="https://i.im.ge/2023/11/22/A8DjpJ.Tree-squid.jpg" /></a></p>
+<p><strong>OBS:</strong> Por padrão o squid nega todo o acesso quando e instalado, para desabilitar vá em:</p>
+<pre><code>-   /etc/squid/squid.conf
+</code></pre>
+<p>proucure a linha que tem http_access <strong>deny</strong> all  e troque para <strong>allow</strong> isso vai permitir acesso para todos os site ou deixar como está e permitir apenas sites específicos no processo de configuração.</p>
 <h2 id="configurando"><strong>Configurando</strong></h2>
-<p>No arquivo <em>debian.conf</em> será feito nossa acl (Access Control List)</p>
+<p>No <em>'debian.conf'</em> será adicionado nossa acl (Access Control List) o padrão de construção é:</p>
+<pre><code>-     acl NOME_DA_ACL TIPO_DA_ACL parâmetro
+
+    EX: acl exemplo dst www.facebook.com
+</code></pre>
+<p>Existe vários (TIPO_DA_ACL)</p>
+<pre><code>-   dst = O parâmetro sera um host,rede ou domínio ex: www.youtube.com
+
+-   url_regex = O parâmetro sera um nome ou palavras
+
+-   port = O parâmetro sera uma porta ex: 80
+
+-   Para ver mais entre em (ACLS Squid)
+</code></pre>
+<p>O arquivo por padrão vem assim:</p>
+<p><a href="https://im.ge/i/A8LYmY"><img alt="Captura de tela 2023-11-21 213021" src="https://i.im.ge/2023/11/22/A8LYmY.Captura-de-tela-2023-11-21-213021.png" /></a></p>
+<p>Aqui um exemplo de um acl criada:</p>
+<p><a href="https://im.ge/i/A8LfHf"><img alt="Captura de tela 2023-11-21 213400" src="https://i.im.ge/2023/11/22/A8LfHf.Captura-de-tela-2023-11-21-213400.png" /></a></p>
+<p>Neste exemplo o nome da acl é <em>'sites_block'</em>. É para bloquear ou permitir o site o padrão de construção é:</p>
+<pre><code>-   http_access permissão NOME_DA_ACL
+</code></pre>
+<p>Tipos de permissão </p>
+<pre><code>deny: Nega o acesso
+
+allow: Permiti o acesso
+</code></pre>
+<ul>
+<li><strong>NOME_DA_ACL:</strong> Nesse caso foi usado sites_block</li>
+</ul>
+<p>O exemplo ficará assim:</p>
+<p><a href="https://im.ge/i/A8LVA1"><img alt="Captura de tela 2023-11-21 213424" src="https://i.im.ge/2023/11/22/A8LVA1.Captura-de-tela-2023-11-21-213424.png" /></a></p>
+<p>Agora e só ir no navegador e configura o proxy, por padrão: </p>
+<p>1.Abra o navegador.</p>
+<p>2.No menu, selecione Configurações ou Opções.</p>
+<p>3.Na seção Rede, selecione Configurações de proxy.</p>
+<p>4.Marque a caixa Usar um servidor proxy.</p>
+<p>5.Insira o endereço IP do servidor proxy e a porta.</p>
+<p>(Pode varias entres os navegadores)</p>
+<h2 id="logs"><strong>Logs</strong></h2>
+<p>Para verificar os logo e simples, lá em cima vimos o arquivo 'access.log' e onde ele fica, para verificar em tempo real use:</p>
+<pre><code>tail -f /var/log/squid/access.log
+</code></pre>
+<p>OBS: caso queira deixaro os logs coloridos use:</p>
+<pre><code>tail -f /var/log/squid/access.log | ccze
+</code></pre>
+<p>so for usa o 'ccze' primeiro verifique se está instalado.</p>
 
 
 
