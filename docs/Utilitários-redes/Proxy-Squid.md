@@ -20,7 +20,11 @@ Aqui uma ilustração mostrando seus caminhos (Usando o comando *tree*)
 
     -   /etc/squid/squid.conf
 
-proucure a linha que tem http_access **deny** all  e troque para **allow** isso vai permitir acesso para todos os site ou deixar como está e permitir apenas sites específicos no processo de configuração.
+Proucure a linha que tem _http_access **deny** all_ e troque para **allow** isso vai permitir o acesso para todos os site, desse jeito:
+
+[![Screenshot_2023-11-22_19-12-37](https://i.im.ge/2023/11/23/AK3UI4.Screenshot-2023-11-22-19-12-37.jpg)](https://im.ge/i/AK3UI4)
+
+Ou deixar como está e permita apenas os sites específicos no processo de configuração.
 
 ## **Configurando**
 
@@ -77,7 +81,7 @@ Agora e só ir no navegador e configura o proxy, por padrão:
 
 5.Insira o endereço IP do servidor proxy e a porta.
 
-(Pode varias entres os navegadores)
+(Pode variar entres os navegadores)
 
 ## **Logs**
 

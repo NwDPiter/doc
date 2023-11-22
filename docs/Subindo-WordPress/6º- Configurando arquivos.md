@@ -18,7 +18,9 @@
 
 
 Ficara assim no www.conf:   
-[![Screenshot_2023-11-21_19-44-04](https://i.im.ge/2023/11/22/A87Hmz.Screenshot-2023-11-21-19-44-04.jpg)](https://im.ge/i/A87Hmz)
+[![novo](https://i.im.ge/2023/11/23/AKxzrm.novo.jpg)](https://im.ge/i/AKxzrm)
+
+Nesse exemplo o diretório do meu site se chama 'Doceria'.
     
 ###OBS: No caso da criação de um site usando o (mkdocs) o documentroot apontara dessa forma.
 
