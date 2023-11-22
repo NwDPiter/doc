@@ -137,7 +137,7 @@ Nesse modo:[[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](http
 
 Estando nesso modo:[![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)] use:
 
-    write
+    do write
 
 ## **Configurando o ssh**
 
