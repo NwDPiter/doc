@@ -8,13 +8,11 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Virtualiza%C3%A7%C3%A3o%20e%20Automa%C3%A7%C3%A3o/Vagrant/">
       
       
-        <link rel="prev" href="../1%C2%BA-%20Instalando%20o%20LAMP/">
+        <link rel="prev" href="../Docker/">
       
-      
-        <link rel="next" href="../3%C2%BA-%20Configurando%20user%20e%20WP/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +20,7 @@
     
     
       
-        <title>2º Instalando o WP CLI - Documentações</title>
+        <title>Vagrant - Documentações</title>
       
     
     
@@ -67,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#entre-no-diretorio" class="md-skip">
+        <a href="#vagrant" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2º  Instalando o WP CLI
+              Vagrant
             
           </span>
         </div>
@@ -247,20 +245,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -274,7 +270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
@@ -287,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -305,27 +301,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2º  Instalando o WP CLI
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -334,69 +312,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#entre-no-diretorio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entre no diretório
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalação
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#altere-o-nome-do-comando" class="md-nav__link">
-    <span class="md-ellipsis">
-      Altere o nome do comando
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#de-permissao-ao-wp-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      De permissão ao WP-CLI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-usuario-para-manipular-o-wp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando usuário para manipular o WP
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -408,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -428,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,7 +363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -468,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -488,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -636,18 +551,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -661,7 +578,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Virtualização e Automação
@@ -674,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Virtualiza%C3%A7%C3%A3o%20e%20Automa%C3%A7%C3%A3o/Ansible/" class="md-nav__link">
+      <a href="../Ansible/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -694,7 +611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Virtualiza%C3%A7%C3%A3o%20e%20Automa%C3%A7%C3%A3o/Docker/" class="md-nav__link">
+      <a href="../Docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -712,9 +629,18 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Virtualiza%C3%A7%C3%A3o%20e%20Automa%C3%A7%C3%A3o/Vagrant/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -723,6 +649,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -752,59 +679,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#entre-no-diretorio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entre no diretório
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalação
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#altere-o-nome-do-comando" class="md-nav__link">
-    <span class="md-ellipsis">
-      Altere o nome do comando
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#de-permissao-ao-wp-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      De permissão ao WP-CLI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-usuario-para-manipular-o-wp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando usuário para manipular o WP
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -819,40 +695,34 @@
                   
 
 
-  <h1>2º  Instalando o WP CLI</h1>
-
-<ul>
-<li>
-<p>Fazendo a instalação do WP-CLI e dando permissão.</p>
-<h3 id="entre-no-diretorio">Entre no diretório</h3>
-<pre><code> cd  /usr/local/bin
+<h1 id="vagrant"><strong>Vagrant</strong></h1>
+<p>Trabalha em conjunto com o docker, Virtual Box, entre outros</p>
+<p>1º - O comando 2º Cria um arquivo vagrantfile e nele ocorre as configurações</p>
+<p>2º - Criar uma vm com o (SO) escolhido</p>
+<pre><code>vagrant init nome_do_SO
 </code></pre>
-<h3 id="instalacao">Instalação</h3>
-</li>
-<li>
-<p>Para instalar o WP-CLI vamos utilizar o seguinte comando:</p>
-<pre><code>  curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
+<p>3º - Sobe a VM</p>
+<pre><code>vagrant up nome da VM
 </code></pre>
-<h3 id="altere-o-nome-do-comando">Altere o nome do comando</h3>
-<pre><code> mv wp-cli.phar wp
+<p>4º - Loga na VM</p>
+<pre><code>vagrant ssh nome
 </code></pre>
-<h3 id="de-permissao-ao-wp-cli">De permissão ao WP-CLI</h3>
-<pre><code> chmod  +x  wp
+<p>5º - Desliga a VM   </p>
+<pre><code>vagrant halt
 </code></pre>
-</li>
-</ul>
-<h3 id="criando-usuario-para-manipular-o-wp">Criando usuário para manipular o WP</h3>
-<pre><code>      useradd -m -s /bin/bash nome_user
-
-                 OU
-
-      wp user create USER e-mail senha administrator USER -- Nome do user
-                       |      |    |          |
-                Nome do user  |Senha do user  |
-                              |               |
-                              |       Função / Papel do user
-                       E-mail do user
+<p>6º - Salva o estado da VM e suspende</p>
+<pre><code>vagrant suspend
 </code></pre>
+<p>7º - retira da suspensão</p>
+<pre><code>vagrant resume nome do vm
+</code></pre>
+<p>8º - Destrói a VM</p>
+<pre><code>vagrant destroy
+</code></pre>
+<p>9º -  Defino o docker como hypervisor</p>
+<pre><code>vagrant up --provider=docker
+</code></pre>
+<p>https://app.vagrantup.com/boxes/search : Cloud de VMs</p>
 
 
 

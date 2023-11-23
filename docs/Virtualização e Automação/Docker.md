@@ -1,8 +1,3 @@
-# Comandos do Docker e Vagrant
-
-
-# **Docker**
-
 1º - Cria um arquivo Dockerfile e dentro dele será feito as configurações do seu container opções mais usadas
 
 Informa a imagem e a versão da mesma
@@ -25,6 +20,7 @@ Executa comandos quando o conteiner inicia
 
     CMD ['comando']
 
+## **Comandos do Docker**
 
 Exibe as imagens usadas
 
@@ -54,15 +50,15 @@ Binda ou redirecionar o tráfego de portas.
 
     docker run -ti -p port_host:port_container nome_cotanier
 
-OBS: Necessita o Iptables
+**OBS:** Essas duas etapas necessita o Iptables
 
-Add um mac ao continer.
+* Add um mac ao continer.
 
-    docker run -ti --mac-address mac nome_container
+        docker run -ti --mac-address mac nome_container
 
-O ip da máquina real se torna do docker
+* O ip da máquina real se torna do docker
 
-    docker run -ti --net-host nome_container
+        docker run -ti --net-host nome_container
 
 
 2º - Mostras as VMS
@@ -126,52 +122,3 @@ O ip da máquina real se torna do docker
 15º - Exibe o percentual de uso do container
 
     docker container stats ID
- 
-
-
-**-------------------------------------------------------------------------------------------------------------**
-
-
-# **Vagrant**
-
-Trabalha em conjunto com o docker,Virtual Box e entre outros
-
-1º - Primerio crie um arquivo chamado Vagrantfile
-
-2º - Criar uma vm com o (SO) escolhido
-    
-    vagrant init nome do sistema operacional 
-
-3º - Sobe a VM
-
-    vagrant up nome da VM
-
-4º - Loga na VM
-
-    vagrant ssh nome
-
-5º - Desliga a VM   
-    
-    vagrant halt  
-
-6º - Salva o estado da VM e suspende
-
-    vagrant suspend
-
-7º - retira da suspensão
-
-    vagrant resume nome do vm
-
-8º - Destrói a VM
-
-    vagrant destroy
-
-9º -  Defino o docker como hypervisor
-
-    vagrant up --provider=docker
-
-
-https://app.vagrantup.com/boxes/search : Cloud de VMs
-
-
-

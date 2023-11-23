@@ -26,7 +26,7 @@ pipe | : Permite pegar a saída do um comando e direcionar para o próximo
 
 **pwd :** mostra o caminho do diretório atual
 
-**rm :** remove file’s (-R(Recursivo()) -F(Executa sem interrupções))
+**rm :** remove file’s (-R 'Recursivo' -F 'Executa sem interrupções')
 
 **cd .. :** Volta um diretório
 
