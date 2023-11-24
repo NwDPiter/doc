@@ -268,6 +268,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Configurando um Roteador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      -  (ipv4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      -  (ipv6)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -755,6 +779,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Configurando um Roteador">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      -  (ipv4)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      -  (ipv6)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -836,6 +884,7 @@ configura terminal = Entra no modo de configurações
 <p>Ao entra no modo de configuração de terminal usando '<em>configure terminal</em>' </p>
 <p>Ficara assim:
 [<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />]</p>
+<h3 id="-ipv4"><strong>-  (ipv4)</strong></h3>
 <p>1º - Configurando a interface de rede</p>
 <pre><code>interface tipo nº/nº
 
@@ -843,49 +892,65 @@ configura terminal = Entra no modo de configurações
 </code></pre>
 <p>Ao entra na interface ficara assim:
 [<a href="https://im.ge/i/AQKuWY"><img alt="config-if" src="https://i.im.ge/2023/11/13/AQKuWY.config-if.png" /></a>]</p>
-<p>2º - Descrição para interface</p>
-<pre><code>description 'texto'
-</code></pre>
-<p>3º - Enderaça a interface  </p>
+<p>2º - Enderaça a interface  </p>
 <pre><code>ip address ip mask
-</code></pre>
-<p>4º - Ligar e desligar</p>
-<pre><code>Ligar = no shutdown
-Desligar = shutdown
-</code></pre>
-<p>5º - Verifica as config de interface</p>
-<pre><code>show ip interface brief
-</code></pre>
-<p>6º - Adiciona rotas ao roteador</p>
-<pre><code>ip route destino mascara prox_salto [metrica]
 
-Destino = Rede de destino
-Mascara = Mascara da rede de destino
-prox_salto = ip da interface de chagada do roteador de destino
-metrica = Por quantos roteadores o pacote irá passar
+    EX: ip address 192.168.0.1 255.255.255.0
+</code></pre>
+<p>3º - Adiciona rotas ao roteador</p>
+<pre><code>ip route destino mascara prox_salto [metrica]
 
     EX: ip route 192.168.1.1  255.255.255.0  10.0.0.4  [2]
 </code></pre>
-<p>7º - Verifica as rotas do roteador </p>
+<p>4º - Adiciona rota padrão no ipv4</p>
+<pre><code>    ip route 0.0.0.0. 0.0.0.0 ip_destino
+
+    EX: ip route 0.0.0.0. 0.0.0.0  192.168.1.1
+</code></pre>
+<p>4º - Verifica as config de interface</p>
+<pre><code>show ip interface brief
+</code></pre>
+<p>5º - Verifica as rotas do roteador </p>
 <pre><code>show ip route
 </code></pre>
-<p>8º - Habilitar a função de roteamento unicast IPv6</p>
+<p>6º - Ligar e desligar</p>
+<pre><code>Ligar = no shutdown
+Desligar = shutdown
+</code></pre>
+<p>7º - Salva as configurações</p>
+<pre><code>do write
+</code></pre>
+<p>8º - Descrição para interface</p>
+<pre><code>description 'texto'
+</code></pre>
+<h3 id="-ipv6"><strong>-  (ipv6)</strong></h3>
+<p>1º - Habilitar a função de roteamento unicast IPv6</p>
 <p>Nesse modo:[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />] use o comando:</p>
 <pre><code>ipv6 unicast-routing
 </code></pre>
-<p>9º - Configurar a interface de rede com um endereço IPv6</p>
+<p>2º - Configurar a interface de rede com um endereço IPv6</p>
 <p>Nesse modo:[<a href="https://im.ge/i/AQKuWY"><img alt="config-if" src="https://i.im.ge/2023/11/13/AQKuWY.config-if.png" /></a>] use o comando:</p>
 <pre><code>ipv6 address IPV6/Mascara
 
     EX: ipv6 address 2001:0DB8:AAAA::1/64
 </code></pre>
-<p>10º - Adiciona rotas em IPV6</p>
+<p>3º - Adiciona rotas em IPV6</p>
 <pre><code>ipv6 route IPv6/Mascara  ip_destino metrica
 
     EX: ipv6 route 2001:0DB8:AAAA::0/64  2001:0DB8:BBBB::1  1
 </code></pre>
-<p>11º - Salva as configurações</p>
-<p>Estando nesso modo:[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />] use:</p>
+<p>4º - Adiciona rota padrão em IPV6</p>
+<pre><code>ipv6 route ::/0  ip_destino
+
+    EX: ipv6 route ::/0  2001:0DB8:BBBB::1
+</code></pre>
+<p>5º - Verifica as config de interface</p>
+<pre><code>show ipv6 interface brief
+</code></pre>
+<p>6º - Verifica as rotas IPV6 do roteador </p>
+<pre><code>show ipv6 route
+</code></pre>
+<p>7º - Salva as configurações</p>
 <pre><code>do write
 </code></pre>
 <h2 id="configurando-o-ssh"><strong>Configurando o ssh</strong></h2>

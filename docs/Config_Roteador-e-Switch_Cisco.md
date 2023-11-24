@@ -71,6 +71,7 @@ Ao entra no modo de configuração de terminal usando '*configure terminal*'
 Ficara assim:
 [![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)]
 
+### **-  (ipv4)**
 
 1º - Configurando a interface de rede
 
@@ -81,45 +82,54 @@ Ficara assim:
 Ao entra na interface ficara assim:
 [[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](https://im.ge/i/AQKuWY)]
 
-2º - Descrição para interface
-
-    description 'texto'
-
-3º - Enderaça a interface  
+2º - Enderaça a interface  
     
     ip address ip mask
 
-4º - Ligar e desligar
+        EX: ip address 192.168.0.1 255.255.255.0
+
+3º - Adiciona rotas ao roteador
+
+    ip route destino mascara prox_salto [metrica]
+
+        EX: ip route 192.168.1.1  255.255.255.0  10.0.0.4  [2]
+
+4º - Adiciona rota padrão no ipv4
+
+        ip route 0.0.0.0. 0.0.0.0 ip_destino
+
+        EX: ip route 0.0.0.0. 0.0.0.0  192.168.1.1
+
+4º - Verifica as config de interface
+
+    show ip interface brief
+
+5º - Verifica as rotas do roteador 
+
+    show ip route
+
+6º - Ligar e desligar
 
     Ligar = no shutdown
     Desligar = shutdown
 
-5º - Verifica as config de interface
+7º - Salva as configurações
 
-    show ip interface brief
-   
-6º - Adiciona rotas ao roteador
+    do write   
 
-    ip route destino mascara prox_salto [metrica]
+8º - Descrição para interface
 
-    Destino = Rede de destino
-    Mascara = Mascara da rede de destino
-    prox_salto = ip da interface de chagada do roteador de destino
-    metrica = Por quantos roteadores o pacote irá passar
+    description 'texto'
 
-        EX: ip route 192.168.1.1  255.255.255.0  10.0.0.4  [2]
+### **-  (ipv6)**
 
-7º - Verifica as rotas do roteador 
-
-    show ip route
-
-8º - Habilitar a função de roteamento unicast IPv6
+1º - Habilitar a função de roteamento unicast IPv6
 
 Nesse modo:[![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)] use o comando:
 
     ipv6 unicast-routing
 
-9º - Configurar a interface de rede com um endereço IPv6
+2º - Configurar a interface de rede com um endereço IPv6
 
 Nesse modo:[[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](https://im.ge/i/AQKuWY)] use o comando:
 
@@ -127,15 +137,27 @@ Nesse modo:[[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](http
 
         EX: ipv6 address 2001:0DB8:AAAA::1/64
 
-10º - Adiciona rotas em IPV6
+3º - Adiciona rotas em IPV6
 
     ipv6 route IPv6/Mascara  ip_destino metrica
 
         EX: ipv6 route 2001:0DB8:AAAA::0/64  2001:0DB8:BBBB::1  1     
 
-11º - Salva as configurações
+4º - Adiciona rota padrão em IPV6
 
-Estando nesso modo:[![Router(config)#](https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png)] use:
+    ipv6 route ::/0  ip_destino
+
+        EX: ipv6 route ::/0  2001:0DB8:BBBB::1
+
+5º - Verifica as config de interface
+
+    show ipv6 interface brief
+
+6º - Verifica as rotas IPV6 do roteador 
+
+    show ipv6 route
+
+7º - Salva as configurações
 
     do write
 
