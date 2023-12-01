@@ -89,7 +89,7 @@ Para verificar os logo e simples, lá em cima vimos o arquivo 'access.log' e ond
 
     tail -f /var/log/squid/access.log 
 
-OBS: caso queira deixaro os logs coloridos use:
+OBS: caso queira deixar os logs coloridos use:
 
     tail -f /var/log/squid/access.log | ccze 
 

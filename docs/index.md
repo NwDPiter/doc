@@ -1,4 +1,4 @@
-# Aqui estão todas as minhas documetações
+# Aqui estão todas as minhas documentações
 
 (*) Em desenvolvimento
 
