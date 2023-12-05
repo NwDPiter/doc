@@ -22,6 +22,7 @@ No momento há apenas sobre
 
         5.1   NMAP
         5.2   Proxy_Squid
+        5.3   Samba-ad-dc *
 
 
 
