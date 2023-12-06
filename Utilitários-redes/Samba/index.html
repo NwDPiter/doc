@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Utilit%C3%A1rios-redes/Samba/">
       
       
-        <link rel="prev" href="../4%C2%BA-%20Criando%20banco%20de%20dados/">
+        <link rel="prev" href="../Proxy-Squid/">
       
       
-        <link rel="next" href="../6%C2%BA-%20Configurando%20arquivos/">
+        <link rel="next" href="../Squid-ACLS/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>5º Instalando o Code Server - Documentações</title>
+        <title>Samba - Documentações</title>
       
     
     
@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#instalacao" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5º  Instalando o Code Server
+              Samba
             
           </span>
         </div>
@@ -306,20 +311,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -333,7 +336,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
@@ -346,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -366,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -386,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,7 +409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -424,16 +427,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -442,7 +438,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -454,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -474,7 +469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,7 +489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -519,18 +514,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -544,7 +541,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Utilitários redes
@@ -557,7 +554,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/NMAP/" class="md-nav__link">
+      <a href="../NMAP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -577,7 +574,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/Proxy-Squid/" class="md-nav__link">
+      <a href="../Proxy-Squid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -595,9 +592,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/Samba/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Samba
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -606,6 +621,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -617,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/Squid-ACLS/" class="md-nav__link">
+      <a href="../Squid-ACLS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -759,6 +801,23 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -772,78 +831,23 @@
                   
 
 
-  <h1>5º  Instalando o Code Server</h1>
+  <h1>Samba</h1>
 
+<h2 id="instalacao"><strong>Instalação</strong></h2>
+<p>Nessa primeira etapa e feita as instalações das dependências para o samba.</p>
 <ul>
-<li>
-<p>Para instalar o code-server vamos utilizar o seguinte comando:</p>
-<pre><code>curl -fsSL https://code-server.dev/install.sh | sh
-
-Quando finalizar a instação vamos vicular ao seu usuário
-
-systemctl restart ...
-</code></pre>
-</li>
-<li>
-<p>Após a instalação vamos configurar.</p>
-<pre><code>Utilizando o usuário criado na etapa do WP-CLI vamos entrar no seguinte arquivo para edição
-usando seu editor preferido ex:nano,micro(no meu caso e o VIM) entre em:
-
-OBS: user=Seu usuário criado
-
-    seu_editor /user/.config/code-server/config.yaml
-
-Aparecerar as seguintes variáveis:
-
-- bind-addr: troca 172.0.0.1 pelo ip da sua máquina ou contêiner.
-
-- auth: Se caso queira que peça senha coloque depois e (auth:) caso não, coloque (none).
-
-- password: Deixa como está.
-
-- cert: Deixa como está.
-
-    bind-addr: Seu_ip:8080
-    auth: none
-    password: ...
-    cert: ...
-
-- Após salvar restart o serviço usando:
-
-    systemctl restart code-server@user.service
-
-Agora e só inserir em seu navegador seu (ip:porta) que vai entrar no code-server
-
-        EX: 192.168.1.1:8080
-</code></pre>
-</li>
+<li>Samba</li>
+<li>Krb5-config</li>
+<li>smbclient</li>
 </ul>
-<p>Já em seu code-server siga as seguintes etapas.</p>
-<ul>
-<li>Vá nas 3 listas no canto superior esquerdo -&gt; File -&gt; Open Folder e abrira essa tela</li>
-</ul>
-<p><a href="https://im.ge/i/ybJzgq"><img alt="Screenshot_2023-11-09_19-22-53" src="https://i.im.ge/2023/11/10/ybJzgq.Screenshot-2023-11-09-19-22-53.jpg" /></a></p>
-<pre><code>        - Clique no diretório que esta o seu site de documentação e depois em OK
-
-        - No canto esquerdo ficara assim:
+<p>Para começar vamos altera o nome da nossa máquina para um domínio, editando o arquivo /etc/hostname</p>
+<pre><code>EX: berlin.alemanha.lab
 </code></pre>
-<p><a href="https://im.ge/i/ybnxkr"><img alt="Screenshot_2023-11-09_19-25-42" src="https://i.im.ge/2023/11/10/ybnxkr.Screenshot-2023-11-09-19-25-42.jpg" /></a></p>
-<pre><code>        - Clique em docs e haverá um arquivo chamado (index.md) e importante não apaga-lo pois, seu site não será carregado em caso de uso de tema.
-
-        - Para criar outras páginas, basta criar arquivos dentro do diretório (docs) que aparecerar no site.
+<p>Após isso, insira seu 'domínio e o primero nome dele' no aquivo /etc/hosts, como e visto na 2º linha.</p>
+<p><a href="https://im.ge/i/CePRt6"><img alt="hosts" src="https://i.im.ge/2023/12/05/CePRt6.hosts.jpg" /></a></p>
+<p>Agora vamos configura o samba usando o seguite comando:</p>
+<pre><code>samba-tool domain provision --use-rfc2307 --interactive
 </code></pre>
-<ul>
-<li>Um comando para ver em tempo real as alterações e:<pre><code>Vá nas 3 listas no canto superior esquerdo -&gt; terminal -&gt; abrir teminal integrado
-
-Digite: 
-    - mkdocs server
-
-Após carregar irá dar uma opção para abrir um nova aba
-
-Para parar de carregar e só ir até o terminal, clicar nele é da Ctrl + C
-</code></pre>
-</li>
-</ul>
 
 
 
