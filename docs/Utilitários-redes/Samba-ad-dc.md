@@ -7,6 +7,8 @@ Nessa primeira etapa e feita as instalações das dependências para o samba.
 * Krb5-config
 * smbclient
 
+## **Configuração**
+
 Para começar vamos altera o nome da nossa máquina para um domínio, editando o arquivo /etc/hostname
 
     EX: berlin.alemanha.lab

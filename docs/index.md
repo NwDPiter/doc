@@ -14,7 +14,10 @@ No momento há apenas sobre
 
         -   Baseados em debian
 
-    3º- Configurando roteador e switch da cisco
+    3º- Infra
+    
+        3.1   Configurando roteador e switch da cisco
+        3.2   Configurando Protocolo RIP
 
     4º- Como subir o WordPress
 

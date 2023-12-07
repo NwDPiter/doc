@@ -59,7 +59,7 @@
 
 ## **Configurando um Roteador**
 
-São os mesmos passos do Switch até a atapa 7 ou seja funciona até a 6
+Os passos do Switch até a atapa 6 também funcionam no roteador
 
 0º - Entre no modo root usando o '*enable*'
 
@@ -79,7 +79,7 @@ Ficara assim:
 
         EX: interface gigabitethernet 0/1 
         
-Ao entra na interface ficara assim:
+Ao entrar na interface ficara assim:
 [[![config-if](https://i.im.ge/2023/11/13/AQKuWY.config-if.png)](https://im.ge/i/AQKuWY)]
 
 2º - Enderaça a interface  

@@ -597,11 +597,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/Samba/" class="md-nav__link">
+      <a href="../../Utilit%C3%A1rios-redes/Samba-ad-dc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Samba
+    Samba ad dc
   </span>
   
 
@@ -774,9 +774,12 @@
 
   <h1>Config protocolo RIP</h1>
 
-<p>Supondo que todos os roteadores estão com seu IPS</p>
-<p>Entre no modo root usando o <em>'enable'</em></p>
-<p>[<a href="https://im.ge/i/AQKrmM"><img alt="Router#" src="https://i.im.ge/2023/11/13/AQKrmM.Router.png" /></a>]</p>
+<p>Em resumo o protocolo RIP emite mensagens de atualização das suas rotas em intervalos 30 segundos.</p>
+<p>Supondo que todos os roteadores estejam com seus respectivos IPs</p>
+<p>Entre no modo root [<a href="https://im.ge/i/AQKrmM"><img alt="Router#" src="https://i.im.ge/2023/11/13/AQKrmM.Router.png" /></a>] usando o <em>'enable'</em></p>
+<p>E depois no modo de config
+[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />]
+usando '<em>configure terminal</em>' </p>
 <p>Nesse modo vamos ativar o protocolo <em>'RIP'</em>:</p>
 <pre><code>router rip
 </code></pre>
@@ -792,6 +795,8 @@
 </code></pre>
 <p>Para verificar as configurações do protocolo usamos:</p>
 <pre><code>show ip protocols
+
+Falta foto
 </code></pre>
 <p>Usando o comando abaixo vai mostrar os status de redes</p>
 <pre><code>show ip route
@@ -799,15 +804,24 @@
 <p>Observer que os que tem a letra 'R' são os compartilhamentos que houve na rede</p>
 <p><a href="https://im.ge/i/EoJtKS"><img alt="rotas" src="https://i.im.ge/2023/12/06/EoJtKS.rotas.png" /></a></p>
 <p><strong>OBS:</strong> Esse (| begin Gateway) e apenas um especificador, para quem usa linux e o mesmo do (grep)</p>
-<p>E importante que um rota padrão seja propagada na rede para possíveis saídas a internet</p>
-<p>Por motivos de seguraça existe a configuração de interface passiva essa configuração ocorre nesse modo:
+<p>E importante que uma rota padrão seja propagada na rede para possíveis saídas a internet:</p>
+<pre><code>ip route 0.0.0.0  0.0.0.0  interface_de_rede_de_saido_do_seu_roteador
+
+    EX: ip route 0.0.0.0  0.0.0.0  g0/0
+</code></pre>
+<p>Caso queria configurar um rota padrão para uma rota especifica basta apenas adicionar o ip de destino</p>
+<pre><code>ip route 0.0.0.0  0.0.0.0  interface_de_rede_do_seu_roteador  ip_da_interface_de_rede_de_destino
+
+    EX:  ip route 0.0.0.0  0.0.0.0  g0/0  192.168.1.1
+</code></pre>
+<p>Por motivos de seguraça existe a configuração de interface passiva, essa configuração ocorre nesse modo:
 <a href="https://im.ge/i/EoHn2y"><img alt="conf-router" src="https://i.im.ge/2023/12/06/EoHn2y.conf-router.png" /></a></p>
-<p>E feita dessa maneira</p>
+<p>Configura dessa maneira:</p>
 <pre><code>passive-interface placa_do_roteador
 
     EX: passive-interface g0/0
 </code></pre>
-<p>O que acontece, apenas as informações de rotas não serão enviadas para essa rede, ou seja, diminue:</p>
+<p>O que acontece, apenas as informações de rotas, não serão enviadas por essa rede, ou seja, diminue:</p>
 <ul>
 <li>Uso de largura de banda</li>
 <li>Uso de recursos de rede</li>
