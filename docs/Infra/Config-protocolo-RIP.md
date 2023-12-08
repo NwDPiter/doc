@@ -37,7 +37,7 @@ Usando o comando abaixo vai mostrar os status de redes
 
     show ip route
 
-Observer que os que tem a letra 'R' são os compartilhamentos que houve na rede
+Observer que a letra 'R' indica os compartilhamentos que houve na rede
 
 [![rotas](https://i.im.ge/2023/12/06/EoJtKS.rotas.png)](https://im.ge/i/EoJtKS)
 
