@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#rip-ipv4" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -270,6 +275,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Config protocolo RIP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -279,6 +295,41 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rip-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      RIP ipv4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rip-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      RIP ipv6
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -759,6 +810,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rip-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      RIP ipv4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rip-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      RIP ipv6
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -774,7 +851,10 @@
 
   <h1>Config protocolo RIP</h1>
 
-<p>Em resumo o protocolo RIP emite mensagens de atualização das suas rotas em intervalos 30 segundos.</p>
+<h2 id="rip-ipv4">RIP ipv4</h2>
+<ul>
+<li>Em resumo o protocolo RIP emite mensagens de atualização das suas rotas em intervalos 30 segundos.</li>
+</ul>
 <p>Supondo que todos os roteadores estejam com seus respectivos IPs</p>
 <p>Entre no modo root [<a href="https://im.ge/i/AQKrmM"><img alt="Router#" src="https://i.im.ge/2023/11/13/AQKrmM.Router.png" /></a>] usando o <em>'enable'</em></p>
 <p>E depois no modo de config
@@ -794,32 +874,41 @@ usando '<em>configure terminal</em>' </p>
     EX: network 192.168.1.0
 </code></pre>
 <p>Para verificar as configurações do protocolo usamos:</p>
-<pre><code>show ip protocols
-
-Falta foto
+<pre><code>do show ip protocols
 </code></pre>
+<p>Nessa foto vai mostrar:</p>
+<ul>
+<li>Protocolo</li>
+<li>Versão do protocolo enviado/recebido</li>
+<li>Ips compartilhados</li>
+<li>Último compartilhamento</li>
+</ul>
+<p><a href="https://im.ge/i/ESxzRc"><img alt="Captura de tela 2023-12-07 220018" src="https://i.im.ge/2023/12/08/ESxzRc.Captura-de-tela-2023-12-07-220018.png" /></a></p>
 <p>Usando o comando abaixo vai mostrar os status de redes</p>
 <pre><code>show ip route
 </code></pre>
 <p>Observer que a letra 'R' indica os compartilhamentos que houve na rede</p>
 <p><a href="https://im.ge/i/EoJtKS"><img alt="rotas" src="https://i.im.ge/2023/12/06/EoJtKS.rotas.png" /></a></p>
 <p><strong>OBS:</strong> Esse (| begin Gateway) e apenas um especificador, para quem usa linux e o mesmo do (grep)</p>
+<ul>
+<li>Essa etapa geralmente se usan quando há algum roteador com caminho para internet ou nuvem.</li>
+</ul>
 <p>E importante que uma rota padrão seja propagada na rede para possíveis saídas a internet:</p>
 <pre><code>ip route 0.0.0.0  0.0.0.0  interface_de_rede_de_saido_do_seu_roteador
 
-    EX: ip route 0.0.0.0  0.0.0.0  g0/0
+    EX: ip route 0.0.0.0  0.0.0.0  0/0
 </code></pre>
 <p>Caso queria configurar um rota padrão para uma rota especifica basta apenas adicionar o ip de destino</p>
 <pre><code>ip route 0.0.0.0  0.0.0.0  interface_de_rede_do_seu_roteador  ip_da_interface_de_rede_de_destino
 
-    EX:  ip route 0.0.0.0  0.0.0.0  g0/0  192.168.1.1
+    EX:  ip route 0.0.0.0  0.0.0.0  0/0  192.168.1.1
 </code></pre>
 <p>Por motivos de seguraça existe a configuração de interface passiva, essa configuração ocorre nesse modo:
 <a href="https://im.ge/i/EoHn2y"><img alt="conf-router" src="https://i.im.ge/2023/12/06/EoHn2y.conf-router.png" /></a></p>
 <p>Configura dessa maneira:</p>
 <pre><code>passive-interface placa_do_roteador
 
-    EX: passive-interface g0/0
+    EX: passive-interface 0/0
 </code></pre>
 <p>O que acontece, apenas as informações de rotas, não serão enviadas por essa rede, ou seja, diminue:</p>
 <ul>
@@ -827,6 +916,23 @@ Falta foto
 <li>Uso de recursos de rede</li>
 <li>É risco de segurança</li>
 </ul>
+<h2 id="rip-ipv6">RIP ipv6</h2>
+<p>A configuração vai ocorrer no modo:[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />]</p>
+<p>1º - Vamos ativar o roteamento do protocolo ipv6 usando:</p>
+<pre><code>ipv6 unicast-routing
+</code></pre>
+<p>2º - Escolher a interface que vai fazer o compartilhamento</p>
+<pre><code>interface tipo placa
+
+    EX: interface gigabitEthernet 0/0
+    Abreviado: interface g 0/0
+</code></pre>
+<p>3º - Ativar o compartilhamento na interface</p>
+<pre><code>ipv6 rip name enable
+</code></pre>
+<p><strong>OBS:</strong> Esse <strong>"name"</strong> e um nome que você vai dar para o processo que sera criado no roteador</p>
+<pre><code>EX: ipv6 rip amendoim enable
+</code></pre>
 
 
 
