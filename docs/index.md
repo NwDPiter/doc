@@ -18,6 +18,7 @@ No momento há apenas sobre
     
         3.1   Configurando roteador e switch da cisco
         3.2   Configurando Protocolo RIP
+        3.3   Configurando Protocolo OSPF
 
     4º- Como subir o WordPress
 
