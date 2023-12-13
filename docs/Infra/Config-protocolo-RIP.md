@@ -100,8 +100,8 @@ A configuração vai ocorrer no modo:[![Router(config)#](https://i.im.ge/2023/11
 
 3º - Ativar o compartilhamento na interface
 
-    ipv6 rip name enable
+    ipv6 rip nome_processo enable
 
-**OBS:** Esse **"name"** e um nome que você vai dar para o processo que sera criado no roteador
+**OBS:** Esse **"nome_processo"** e um nome que você vai dar para o processo que sera criado no roteador e todas a interfaces devem ter o mesmo nome de processo.
 
     EX: ipv6 rip amendoim enable
