@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Infra/Config-protocolo-OSPF/">
       
       
-        <link rel="prev" href="../1%C2%BA-%20Instalando%20o%20LAMP/">
+        <link rel="prev" href="../../ISA_Introdu%C3%A7%C3%A3o-ao-linux/">
       
       
-        <link rel="next" href="../3%C2%BA-%20Configurando%20user%20e%20WP/">
+        <link rel="next" href="../Config-protocolo-RIP/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>2º Instalando o WP CLI - Documentações</title>
+        <title>Config protocolo OSPF - Documentações</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#entre-no-diretorio" class="md-skip">
+        <a href="#ospf-ipv4" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2º  Instalando o WP CLI
+              Config protocolo OSPF
             
           </span>
         </div>
@@ -228,18 +228,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -253,7 +255,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Infra
@@ -264,9 +266,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Infra/Config-protocolo-OSPF/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Config protocolo OSPF
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -275,6 +295,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ospf-ipv4" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSPF-IPV4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ospf-ipv6" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSPF-IPV6
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -286,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Infra/Config-protocolo-RIP/" class="md-nav__link">
+      <a href="../Config-protocolo-RIP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -306,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Infra/Config_Roteador-e-Switch_Cisco/" class="md-nav__link">
+      <a href="../Config_Roteador-e-Switch_Cisco/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -331,20 +387,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -358,7 +412,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
@@ -371,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -389,27 +443,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    2º  Instalando o WP CLI
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -418,69 +454,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#entre-no-diretorio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Entre no diretório
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instalacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalação
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#altere-o-nome-do-comando" class="md-nav__link">
-    <span class="md-ellipsis">
-      Altere o nome do comando
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#de-permissao-ao-wp-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      De permissão ao WP-CLI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-usuario-para-manipular-o-wp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando usuário para manipular o WP
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -492,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -552,7 +525,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -572,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -864,45 +837,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#entre-no-diretorio" class="md-nav__link">
+  <a href="#ospf-ipv4" class="md-nav__link">
     <span class="md-ellipsis">
-      Entre no diretório
+      OSPF-IPV4
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacao" class="md-nav__link">
+  <a href="#ospf-ipv6" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalação
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#altere-o-nome-do-comando" class="md-nav__link">
-    <span class="md-ellipsis">
-      Altere o nome do comando
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#de-permissao-ao-wp-cli" class="md-nav__link">
-    <span class="md-ellipsis">
-      De permissão ao WP-CLI
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#criando-usuario-para-manipular-o-wp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Criando usuário para manipular o WP
+      OSPF-IPV6
     </span>
   </a>
   
@@ -923,40 +869,48 @@
                   
 
 
-  <h1>2º  Instalando o WP CLI</h1>
+  <h1>Config protocolo OSPF</h1>
 
-<ul>
-<li>
-<p>Fazendo a instalação do WP-CLI e dando permissão.</p>
-<h3 id="entre-no-diretorio">Entre no diretório</h3>
-<pre><code> cd  /usr/local/bin
+<h2 id="ospf-ipv4">OSPF-IPV4</h2>
+<p>Supondo que todos os roteadores estejam com seus respectivos IPs</p>
+<p>As configurações ocorreram em 
+[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />]</p>
+<p>Ativa o protocolo</p>
+<pre><code>router ospf 10
 </code></pre>
-<h3 id="instalacao">Instalação</h3>
-</li>
-<li>
-<p>Para instalar o WP-CLI vamos utilizar o seguinte comando:</p>
-<pre><code>  curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-</code></pre>
-<h3 id="altere-o-nome-do-comando">Altere o nome do comando</h3>
-<pre><code> mv wp-cli.phar wp
-</code></pre>
-<h3 id="de-permissao-ao-wp-cli">De permissão ao WP-CLI</h3>
-<pre><code> chmod  +x  wp
-</code></pre>
-</li>
-</ul>
-<h3 id="criando-usuario-para-manipular-o-wp">Criando usuário para manipular o WP</h3>
-<pre><code>      useradd -m -s /bin/bash nome_user
+<p>Quando ativado entra automaticamente no modo de configuração de routeador</p>
+<p>[<a href="https://im.ge/i/EoHn2y"><img alt="conf-router" src="https://i.im.ge/2023/12/06/EoHn2y.conf-router.png" /></a>]
+a etapa 1,2 e 3 ocorre nesse modo.</p>
+<p>1º - Define a priridade do reteador designado (DR), Quanto menor o número id mais prioridade vai ter.</p>
+<pre><code>router-id _._._._
 
-                 OU
-
-      wp user create USER e-mail senha administrator USER -- Nome do user
-                       |      |    |          |
-                Nome do user  |Senha do user  |
-                              |               |
-                              |       Função / Papel do user
-                       E-mail do user
+    EX: router-id 1.1.1.1
 </code></pre>
+<p><strong>OBS:</strong> Em caso de mundança de id e importante limpar os preocessos do ospf usando:</p>
+<pre><code>clear ip ospf process
+</code></pre>
+<p>2º - Atribui a interface a uma área OSPF</p>
+<pre><code>network ip mascara_invertida área valor
+
+    EX network 192.168.1.0  0.0.0.255  area 0
+                                |
+                                - Geralmento usamos 255.255.255.0 mas com esse protocolo e invertido
+</code></pre>
+<p>3º - Configurando rede passiva</p>
+<pre><code>passive-interface tipo placa
+
+    passive-interface g 0/0
+</code></pre>
+<p>Exibe uma tabela do roteadores vizinhos</p>
+<pre><code>show ip ospf neighbor
+</code></pre>
+<p>Exibe informação sobre todos os roteadores da rede</p>
+<pre><code>show ip ospf database
+</code></pre>
+<p>Ver as rotas</p>
+<pre><code>show ip route
+</code></pre>
+<h2 id="ospf-ipv6">OSPF-IPV6</h2>
 
 
 
