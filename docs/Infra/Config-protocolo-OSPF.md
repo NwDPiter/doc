@@ -28,7 +28,7 @@ DR = E um roteador centra que vai receber informações de outros roteadores e r
 
     clear ip ospf process
 
-2º - Atribui a interface a uma área OSPF
+2º - Atribui a interface a uma área OSPF, FAÇA ISSO EM TODAS AS INTERFACES QUE FOR USAR...
 
     network ip_da_rede mascara_invertida área valor
 
@@ -41,7 +41,6 @@ DR = E um roteador centra que vai receber informações de outros roteadores e r
     passive-interface tipo placa
 
         passive-interface g 0/0
-
 
 Exibe uma tabela do roteadores vizinhos
 
