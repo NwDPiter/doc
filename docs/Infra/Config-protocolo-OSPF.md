@@ -16,7 +16,9 @@ Quando ativado entra automaticamente no modo de configuração de routeador
 [[![conf-router](https://i.im.ge/2023/12/06/EoHn2y.conf-router.png)](https://im.ge/i/EoHn2y)]
 a etapa 1,2 e 3 ocorre nesse modo.
 
-1º - Define a priridade do reteador designado (DR), Quanto menor o número id mais prioridade vai ter.
+1º - Define a prioridade do reteador designado (DR), Quanto menor o número do id mais prioridade vai ter.
+
+DR = E um roteador centra que vai receber informações de outros roteadores e realizar calculos de melhores caminhos,melhores liks de rede ,etc..por fim devolver so resultados.
 
     router-id _._._._ 
 
@@ -28,7 +30,7 @@ a etapa 1,2 e 3 ocorre nesse modo.
 
 2º - Atribui a interface a uma área OSPF
 
-    network ip mascara_invertida área valor
+    network ip_da_rede mascara_invertida área valor
 
         EX network 192.168.1.0  0.0.0.255  area 0
                                     |

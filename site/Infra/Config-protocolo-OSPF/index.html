@@ -881,7 +881,8 @@
 <p>Quando ativado entra automaticamente no modo de configuração de routeador</p>
 <p>[<a href="https://im.ge/i/EoHn2y"><img alt="conf-router" src="https://i.im.ge/2023/12/06/EoHn2y.conf-router.png" /></a>]
 a etapa 1,2 e 3 ocorre nesse modo.</p>
-<p>1º - Define a priridade do reteador designado (DR), Quanto menor o número id mais prioridade vai ter.</p>
+<p>1º - Define a prioridade do reteador designado (DR), Quanto menor o número do id mais prioridade vai ter.</p>
+<p>DR = E um roteador centra que vai receber informações de outros roteadores e realizar calculos de melhores caminhos,melhores liks de rede ,etc..por fim devolver so resultados.</p>
 <pre><code>router-id _._._._
 
     EX: router-id 1.1.1.1
@@ -890,7 +891,7 @@ a etapa 1,2 e 3 ocorre nesse modo.</p>
 <pre><code>clear ip ospf process
 </code></pre>
 <p>2º - Atribui a interface a uma área OSPF</p>
-<pre><code>network ip mascara_invertida área valor
+<pre><code>network ip_da_rede mascara_invertida área valor
 
     EX network 192.168.1.0  0.0.0.255  area 0
                                 |
