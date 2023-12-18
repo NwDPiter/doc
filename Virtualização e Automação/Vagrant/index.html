@@ -802,8 +802,59 @@
 <h1 id="vagrant"><strong>Vagrant</strong></h1>
 <p>Trabalha em conjunto com o docker, Virtual Box, entre outros</p>
 <p>1º - O comando 2º Cria um arquivo vagrantfile e nele ocorre as configurações</p>
+<ul>
+<li>
+<p>Ao abrir o arquivo a primera etapa e sua versão que por padrão vem última ("2")
+<a href="https://im.ge/i/EZgCsr"><img alt="Versão do vagrabt" src="https://i.im.ge/2023/12/15/EZgCsr.Versao-do-vagrabt.png" /></a></p>
+</li>
+<li>
+<p>Configurando qual imagem vamos usar, como podemos ver nesse caso usamos "debian 12"
+<a href="https://im.ge/i/EZVBbq"><img alt="Debian" src="https://i.im.ge/2023/12/15/EZVBbq.Debian.png" /></a> 
+você pode encontra o nome das vms aqui: <a href="https://app.vagrantup.com/boxes/search">VMS</a></p>
+</li>
+<li>
+<p>Verifica se tem uma imgem mais atualizada, nesse caso esta desativado
+<a href="https://im.ge/i/EZgt3f"><img alt="Verifiq-update" src="https://i.im.ge/2023/12/15/EZgt3f.Verifiq-update.png" /></a></p>
+</li>
+<li>
+<p>Faz o redirecionamento de portas da vm para a máquina real
+<a href="https://im.ge/i/EZgPU1"><img alt="Redirecionamento de porta" src="https://i.im.ge/2023/12/15/EZgPU1.Redirecionamento-de-porta.png" /></a></p>
+</li>
+<li>
+<p>Redireciona o tráfego de porta para um ip específico, nesse caso e localmente, ou seja, própria máquina
+<a href="https://im.ge/i/EZgNTP"><img alt="Redirec de portas para um ip" src="https://i.im.ge/2023/12/15/EZgNTP.Redirec-de-portas-para-um-ip.png" /></a></p>
+</li>
+<li>
+<p>Configura uma ip fixo na rede privada do vagrant
+<a href="https://im.ge/i/EZg0tD"><img alt="Rede privada com host-only" src="https://i.im.ge/2023/12/15/EZg0tD.Rede-privada-com-host-only.png" /></a></p>
+</li>
+<li>
+<p>A interface de rede se torna modo bridge, recebendo um ip do roteador
+<a href="https://im.ge/i/En0v88"><img alt="public" src="https://i.im.ge/2023/12/18/En0v88.public.png" /></a></p>
+</li>
+<li>
+<p>Compartilha arquivos do host com o vm
+<a href="https://im.ge/i/EZg5k4"><img alt="Shere with guest" src="https://i.im.ge/2023/12/15/EZg5k4.Shere-with-guest.png" /></a></p>
+</li>
+<li>
+<p>True para ativa interface gráfica e False para desativar 
+<a href="https://im.ge/i/EZgmjq"><img alt="Define o virtualizador" src="https://i.im.ge/2023/12/15/EZgmjq.Define-o-virtualizador.png" /></a></p>
+</li>
+<li>
+<p>Determina a quantidade de RAM que vai usar             <br />
+<a href="https://im.ge/i/EZgjFC"><img alt="Define a quatida de memória" src="https://i.im.ge/2023/12/15/EZgjFC.Define-a-quatida-de-memoria.png" /></a></p>
+</li>
+<li>
+<p>Os comando que serão usado ao iniciar a vm
+<a href="https://im.ge/i/EZgwRp"><img alt="Comandos" src="https://i.im.ge/2023/12/15/EZgwRp.Comandos.png" /></a></p>
+</li>
+</ul>
 <p>2º - Criar uma vm com o (SO) escolhido</p>
 <pre><code>vagrant init nome_do_SO
+
+        OU
+
+(vagrant init) e editar o arquivo vagrantfile
 </code></pre>
 <p>3º - Sobe a VM</p>
 <pre><code>vagrant up nome da VM
@@ -818,15 +869,15 @@
 <pre><code>vagrant suspend
 </code></pre>
 <p>7º - retira da suspensão</p>
-<pre><code>vagrant resume nome do vm
+<pre><code>vagrant resume nome_do_vm
 </code></pre>
 <p>8º - Destrói a VM</p>
 <pre><code>vagrant destroy
 </code></pre>
-<p>9º -  Defino o docker como hypervisor</p>
-<pre><code>vagrant up --provider=docker
+<p>9º -  Defino o hypervisor</p>
+<pre><code>vagrant up --provider=docker |docker|
+vagrant up --provider=virtualbox |box|
 </code></pre>
-<p>https://app.vagrantup.com/boxes/search : Cloud de VMs</p>
 
 
 
