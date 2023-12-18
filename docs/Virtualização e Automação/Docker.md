@@ -36,7 +36,7 @@ Altera o nome
 
 linka dois container pelo nome
 
-    docker run -ti –link container1 –name container2 nome_container
+    docker run -ti --link container1 --name container2 nome_container
 
 Passa um servidor dns
 

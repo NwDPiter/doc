@@ -881,8 +881,8 @@
 <p>Quando ativado entra automaticamente no modo de configuração de routeador</p>
 <p>[<a href="https://im.ge/i/EoHn2y"><img alt="conf-router" src="https://i.im.ge/2023/12/06/EoHn2y.conf-router.png" /></a>]
 a etapa 1,2 e 3 ocorre nesse modo.</p>
-<p>1º - Define a prioridade do reteador designado (DR), Quanto menor o número do id mais prioridade vai ter.</p>
-<p>DR = E um roteador centra que vai receber informações de outros roteadores e realizar calculos de melhores caminhos,melhores liks de rede ,etc..por fim devolver so resultados.</p>
+<p>1º - Define a prioridade do roteador designado (DR), Quanto menor o número do id mais prioridade vai ter.</p>
+<p><strong>DR</strong> = E um roteador central que vai receber informações de outros roteadores e realizar calculos de melhores caminhos,melhores liks de rede ,etc..por fim devolver os resultados a cada roteador.</p>
 <pre><code>router-id _._._._
 
     EX: router-id 1.1.1.1
@@ -897,11 +897,17 @@ a etapa 1,2 e 3 ocorre nesse modo.</p>
                                 |
                                 - Geralmento usamos 255.255.255.0 mas com esse protocolo e invertido
 </code></pre>
-<p>3º - Configurando rede passiva</p>
+<p>3º - Configurando rede passiva;</p>
 <pre><code>passive-interface tipo placa
 
     passive-interface g 0/0
 </code></pre>
+<p>O que acontece, apenas as informações de rotas, não serão enviadas por essa rede, ou seja, diminue:</p>
+<ul>
+<li>Uso de largura de banda</li>
+<li>Uso de recursos de rede</li>
+<li>É risco de segurança</li>
+</ul>
 <p>Exibe uma tabela do roteadores vizinhos</p>
 <pre><code>show ip ospf neighbor
 </code></pre>

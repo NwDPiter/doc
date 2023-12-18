@@ -16,9 +16,9 @@ Quando ativado entra automaticamente no modo de configuração de routeador
 [[![conf-router](https://i.im.ge/2023/12/06/EoHn2y.conf-router.png)](https://im.ge/i/EoHn2y)]
 a etapa 1,2 e 3 ocorre nesse modo.
 
-1º - Define a prioridade do reteador designado (DR), Quanto menor o número do id mais prioridade vai ter.
+1º - Define a prioridade do roteador designado (DR), Quanto menor o número do id mais prioridade vai ter.
 
-DR = E um roteador centra que vai receber informações de outros roteadores e realizar calculos de melhores caminhos,melhores liks de rede ,etc..por fim devolver so resultados.
+**DR** = E um roteador central que vai receber informações de outros roteadores e realizar calculos de melhores caminhos,melhores liks de rede ,etc..por fim devolver os resultados a cada roteador.
 
     router-id _._._._ 
 
@@ -36,11 +36,17 @@ DR = E um roteador centra que vai receber informações de outros roteadores e r
                                     |
                                     - Geralmento usamos 255.255.255.0 mas com esse protocolo e invertido 
 
-3º - Configurando rede passiva
+3º - Configurando rede passiva;
 
     passive-interface tipo placa
 
         passive-interface g 0/0
+
+O que acontece, apenas as informações de rotas, não serão enviadas por essa rede, ou seja, diminue:
+
+* Uso de largura de banda
+* Uso de recursos de rede
+* É risco de segurança
 
 Exibe uma tabela do roteadores vizinhos
 

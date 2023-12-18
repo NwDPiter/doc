@@ -14,7 +14,7 @@ usando '*configure terminal*'
 
 Nesse modo vamos ativar o protocolo _'RIP'_:
 
-    router rip
+    router rip          Desativar: no router rip
 
 Após usar o comando acima o roteador entrará neste modo automaticamente
 
