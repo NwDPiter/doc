@@ -7,7 +7,7 @@ No momento há apenas sobre
     1º- Virtualização e Automação
         
         1.1   Docker  
-        1.2   Vagrant *
+        1.2   Vagrant 
         1.3   Ansible *
 
     2º- Comandos iniciais do linux
