@@ -22,7 +22,7 @@ a etapa 1,2 e 3 ocorre nesse modo.
 
     router-id _._._._ 
 
-        EX: router-id 1.1.1.1
+        EX: router-id 1.1.1.1  EX: router-id 2.2.2.2 EX: router-id 3.3.3.3  
 
 **OBS:** Em caso de mundança de id e importante limpar os preocessos do ospf usando:
 
