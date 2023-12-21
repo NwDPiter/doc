@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Infra/Config_Roteador-e-Switch_Cisco/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Utilit%C3%A1rios-redes/DHCP-dnsmasq/">
       
       
-        <link rel="prev" href="../Config-protocolo-RIP/">
+        <link rel="prev" href="../../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/">
       
       
-        <link rel="next" href="../../Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/">
+        <link rel="next" href="../NMAP/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Config Roteador e Switch Cisco - Documentações</title>
+        <title>DHCP dnsmasq - Documentações</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configurando-um-switch" class="md-skip">
+        <a href="#configurando-um-sevidor-dhcp" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Config Roteador e Switch Cisco
+              DHCP dnsmasq
             
           </span>
         </div>
@@ -228,20 +228,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -255,7 +253,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Infra
@@ -268,7 +266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Config-protocolo-OSPF/" class="md-nav__link">
+      <a href="../../Infra/Config-protocolo-OSPF/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -288,7 +286,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Config-protocolo-RIP/" class="md-nav__link">
+      <a href="../../Infra/Config-protocolo-RIP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -306,27 +304,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Config Roteador e Switch Cisco
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Infra/Config_Roteador-e-Switch_Cisco/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -335,75 +315,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-um-switch" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurando um Switch
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-um-roteador" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurando um Roteador
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configurando um Roteador">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-ipv4" class="md-nav__link">
-    <span class="md-ellipsis">
-      -  (ipv4)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-ipv6" class="md-nav__link">
-    <span class="md-ellipsis">
-      -  (ipv6)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-o-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurando o ssh
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -623,18 +534,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -648,7 +561,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Utilitários redes
@@ -659,9 +572,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/DHCP-dnsmasq/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    DHCP dnsmasq
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -670,6 +601,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-um-sevidor-dhcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando um sevidor DHCP
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -681,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/NMAP/" class="md-nav__link">
+      <a href="../NMAP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -701,7 +659,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/Proxy-Squid/" class="md-nav__link">
+      <a href="../Proxy-Squid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -721,7 +679,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/Samba-ad-dc/" class="md-nav__link">
+      <a href="../Samba-ad-dc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -741,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Utilit%C3%A1rios-redes/Squid-ACLS/" class="md-nav__link">
+      <a href="../Squid-ACLS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -890,51 +848,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configurando-um-switch" class="md-nav__link">
+  <a href="#configurando-um-sevidor-dhcp" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurando um Switch
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-um-roteador" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurando um Roteador
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Configurando um Roteador">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#-ipv4" class="md-nav__link">
-    <span class="md-ellipsis">
-      -  (ipv4)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#-ipv6" class="md-nav__link">
-    <span class="md-ellipsis">
-      -  (ipv6)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-o-ssh" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurando o ssh
+      Configurando um sevidor DHCP
     </span>
   </a>
   
@@ -955,158 +871,65 @@
                   
 
 
-  <h1>Config Roteador e Switch Cisco</h1>
+  <h1>DHCP dnsmasq</h1>
 
-<h2 id="configurando-um-switch"><strong>Configurando um Switch</strong></h2>
-<p>0º- Entra no modo 'root' e no modo de configuração </p>
-<pre><code>User simples = Name&gt;
-User Super = Name#
+<h2 id="configurando-um-sevidor-dhcp">Configurando um sevidor DHCP</h2>
+<p>Em um ambiente linux vamos instalar:</p>
+<ul>
+<li>dnsmasq</li>
+</ul>
+<p>1º - Aquivo de configuração do dnsmasq é:</p>
+<pre><code>/etc/dnsmasq.conf
+</code></pre>
+<p>mas, vamos criar um arquivo (exemplo.conf) no diretório (dnsmasq.d)</p>
+<pre><code>/etc/dnsmasq.d/exemplo.conf
+</code></pre>
+<p>todas as configurações no arquivo(exemplo.conf) vai migra para dnsmasq.conf.</p>
+<p>2º - Editando o arquivo <strong>exemple.conf</strong> a configuração padrão é essa:</p>
+<ul>
+<li>
+<p>interface= nome da interface que vai ser dhcp</p>
+<pre><code>EX: interface= eht1
+</code></pre>
+</li>
+<li>
+<p>dhcp-range=ip inicial , ip final , mascara de rede , tempo que o dispositivo fica com o ip</p>
+<pre><code>EX: dhcp-range= 192.168.1.1, 192.168.1.254 , 255.255.255.0 , 12h
+</code></pre>
+</li>
+<li>
+<p>dhcp-option= option , ip do roteador</p>
+<pre><code>EX: dhcp-option= 3 , 192.168.1.254
 
-enable = acessa modo 'root'
+    3: Identifica o servidor DNS
+</code></pre>
+</li>
+<li>
+<p>dhcp-option= option , ip do dns  (<strong>Opicional</strong>)</p>
+<pre><code>EX: dhcp-option= 6 , 8.8.8.8
 
-configura terminal = Entra no modo de configurações
+    6: Identifica o servidor DNS
 </code></pre>
-<p>1º - Alterar nome do roteador </p>
-<pre><code>hostname nome
+</li>
+<li>
+<p>dhcp-option= option, domínio (<strong>Opicional</strong>)</p>
+<pre><code>EX: dhcp-option= 15, alemanha.lab
 
-    EX: hostname R1 : altera o nome do roteador para R1
+    15: Especifica um domínio se caso você esteja em um
 </code></pre>
-<p>2º - Adiciona senha para acessar o console</p>
-<pre><code>line console 0
- |- password 'senha'
- |- - login
+</li>
+<li>
+<p>log-facility= caminho/para/o/log</p>
+<pre><code>EX: log-facility= /var/log/dnsmasq.log
 </code></pre>
-<p>3º - Protege o modo privilegiado (#)</p>
-<pre><code>enable secret 'senha'
-</code></pre>
-<p>4º - protege conexões ssh/tealnet</p>
-<pre><code>line vty 0 15           seleciona as 16 vty(Virtual Terminal Lines) usadas para conexões ssh
- |- password 'senha'
- |- - login
-</code></pre>
-<p>5º - Criptografa as senhas</p>
-<pre><code>    service password-encryption
-</code></pre>
-<p>6º - Coloca um banner ao logar no Switch</p>
-<pre><code>banner motd '#mensagem#'
-</code></pre>
-<p>7º - Configura a interface do Switch</p>
-<pre><code>interface vlan 1,2,3... quantas tiver escolha uma
- |- ip address ip mask
- |- - no shutdown
-</code></pre>
-<p><strong>obs: (no) faz o inverso</strong></p>
-<p>8º - Comando que salva as config</p>
-<pre><code>copy running-config startup-config
-</code></pre>
-<p>9º - Atribuir um gateway padrão para o switch</p>
-<pre><code>ip default-gateway ip
-</code></pre>
-<h2 id="configurando-um-roteador"><strong>Configurando um Roteador</strong></h2>
-<p>Os passos do Switch até a atapa 6 também funcionam no roteador</p>
-<p>0º - Entre no modo root usando o '<em>enable</em>'</p>
-<p>Ficara assim:
-[<a href="https://im.ge/i/AQKrmM"><img alt="Router#" src="https://i.im.ge/2023/11/13/AQKrmM.Router.png" /></a>]</p>
-<p>Ao entra no modo de configuração de terminal usando '<em>configure terminal</em>' </p>
-<p>Ficara assim:
-[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />]</p>
-<h3 id="-ipv4"><strong>-  (ipv4)</strong></h3>
-<p>1º - Configurando a interface de rede</p>
-<pre><code>interface tipo nº/nº
-
-    EX: interface gigabitethernet 0/1
-</code></pre>
-<p>Ao entrar na interface ficara assim:
-[<a href="https://im.ge/i/AQKuWY"><img alt="config-if" src="https://i.im.ge/2023/11/13/AQKuWY.config-if.png" /></a>]</p>
-<p>2º - Enderaça a interface  </p>
-<pre><code>ip address ip mask
-
-    EX: ip address 192.168.0.1 255.255.255.0
-</code></pre>
-<p>3º - Adiciona rotas ao roteador</p>
-<pre><code>ip route destino mascara prox_salto [metrica]
-
-    EX: ip route 192.168.1.1  255.255.255.0  10.0.0.4  [2]
-</code></pre>
-<p>4º - Adiciona rota padrão no ipv4</p>
-<pre><code>    ip route 0.0.0.0. 0.0.0.0 ip_destino
-
-    EX: ip route 0.0.0.0. 0.0.0.0  192.168.1.1
-</code></pre>
-<p>4º - Verifica as config de interface</p>
-<pre><code>show ip interface brief
-</code></pre>
-<p>5º - Verifica as rotas do roteador </p>
-<pre><code>show ip route
-</code></pre>
-<p>6º - Ligar e desligar</p>
-<pre><code>Ligar = no shutdown
-Desligar = shutdown
-</code></pre>
-<p>7º - Salva as configurações</p>
-<pre><code>do write
-</code></pre>
-<p>8º - Descrição para interface</p>
-<pre><code>description 'texto'
-</code></pre>
-<h3 id="-ipv6"><strong>-  (ipv6)</strong></h3>
-<p>1º - Habilitar a função de roteamento unicast IPv6</p>
-<p>Nesse modo:[<img alt="Router(config)#" src="https://i.im.ge/2023/11/13/AQKOoD.Routerconfig.png" />] use o comando:</p>
-<pre><code>ipv6 unicast-routing
-</code></pre>
-<p>2º - Configurar a interface de rede com um endereço IPv6</p>
-<p>Nesse modo:[<a href="https://im.ge/i/AQKuWY"><img alt="config-if" src="https://i.im.ge/2023/11/13/AQKuWY.config-if.png" /></a>] use o comando:</p>
-<pre><code>ipv6 address IPV6/Mascara
-
-    EX: ipv6 address 2001:0DB8:AAAA::1/64
-</code></pre>
-<p>3º - Adiciona rotas em IPV6</p>
-<pre><code>ipv6 route IPv6/Mascara  ip_destino metrica
-
-    EX: ipv6 route 2001:0DB8:AAAA::0/64  2001:0DB8:BBBB::1  1
-</code></pre>
-<p>4º - Adiciona rota padrão em IPV6</p>
-<pre><code>ipv6 route ::/0  ip_destino
-
-    EX: ipv6 route ::/0  2001:0DB8:BBBB::1
-</code></pre>
-<p>5º - Verifica as config de interface</p>
-<pre><code>show ipv6 interface brief
-</code></pre>
-<p>6º - Verifica as rotas IPV6 do roteador </p>
-<pre><code>show ipv6 route
-</code></pre>
-<p>7º - Salva as configurações</p>
-<pre><code>do write
-</code></pre>
-<h2 id="configurando-o-ssh"><strong>Configurando o ssh</strong></h2>
-<p>1º - Coloca um nome para o ip (DNS)</p>
-<pre><code>ip domain-name 'nome'
-</code></pre>
-<p>2º - Gera um par de chaves RSA</p>
-<pre><code>    crypto key generate rsa
-
-Vai perdir um valor de criptografia
-
-    1024
-
-Se caso queria remover essa chave
-
-    crypto key zeroize rsa
-</code></pre>
-<p>3º - Cria um login e senha</p>
-<pre><code>username 'nome' secret 'senha'
-</code></pre>
-<p>4º - Ativa o protocolo e exige login</p>
-<pre><code>line vty 0 15
- |- transport input ssh 
- |- - login local
- |- - - exit
-</code></pre>
-<p>5º - Ativa a versão 2 do ssh </p>
-<pre><code>ip ssh version 2
-    exit
-</code></pre>
+</li>
+</ul>
+<p>Ficaria assim:</p>
+<p><a href="https://im.ge/i/xXDWlT"><img alt="Screenshot_2023-12-20_22-05-23" src="https://i.im.ge/2023/12/21/xXDWlT.Screenshot-2023-12-20-22-05-23.jpg" /></a></p>
+<p>Agora e só você está na mesma rede que do servidor DHCP e pedir para receber ip em modo DCHP</p>
+<p>EX no Windows:</p>
+<p><a href="https://im.ge/i/xXI7vf"><img alt="tcp" src="https://i.im.ge/2023/12/21/xXI7vf.tcp.jpg" /></a>
+<a href="https://im.ge/i/xXIISm"><img alt="Screenshot_2023-12-20_22-11-28" src="https://i.im.ge/2023/12/21/xXIISm.Screenshot-2023-12-20-22-11-28.jpg" /></a></p>
 
 
 
