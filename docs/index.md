@@ -1,4 +1,4 @@
-# Aqui estão todas as minhas documentações
+# Alguns dos meus aprendizados
 
 (*) Em desenvolvimento
 
@@ -16,7 +16,7 @@ No momento há apenas sobre
 
     3º- Infra
     
-        3.1   Configurando roteador e switch da cisco
+        3.1   Configurando roteador e switch (cisco)
         3.2   Configurando Protocolo RIP
         3.3   Configurando Protocolo OSPF
 
@@ -26,8 +26,9 @@ No momento há apenas sobre
 
         5.1   NMAP
         5.2   Proxy_Squid
-        5.3   Samba-ad-dc *
+        5.3   Samba
         5.4   Servidor DHCP (dnsmasq)
+        
 
 
 

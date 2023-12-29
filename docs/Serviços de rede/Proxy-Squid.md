@@ -16,7 +16,7 @@ Aqui uma ilustração mostrando seus caminhos (Usando o comando *tree*)
 
 [![Tree-squid](https://i.im.ge/2023/11/22/A8DjpJ.Tree-squid.jpg)](https://im.ge/i/A8DjpJ)
 
-**OBS:** Por padrão o squid nega todo o acesso quando e instalado, para desabilitar vá em:
+**OBS:** Por padrão o squid nega todo o acesso quando é instalado, para desabilitar vá em:
 
     -   /etc/squid/squid.conf
 
@@ -61,7 +61,7 @@ Tipos de permissão
 
     deny: Nega o acesso                 
 
-    allow: Permiti o acesso
+    allow: Permite o acesso
 
 * **NOME_DA_ACL:** Nesse caso foi usado sites_block
 

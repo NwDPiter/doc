@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Utilit%C3%A1rios-redes/DHCP-dnsmasq/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Servi%C3%A7os%20de%20rede/Samba/">
       
       
-        <link rel="prev" href="../../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/">
+        <link rel="prev" href="../Proxy-Squid/">
       
       
-        <link rel="next" href="../NMAP/">
+        <link rel="next" href="../Squid-ACLS/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>DHCP dnsmasq - Documentações</title>
+        <title>Samba - Documentações</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configurando-um-sevidor-dhcp" class="md-skip">
+        <a href="#instalacao" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DHCP dnsmasq
+              Samba
             
           </span>
         </div>
@@ -196,7 +196,7 @@
         
   
   <span class="md-ellipsis">
-    Aqui estão todas as minhas documentações
+    Alguns dos meus aprendizados
   </span>
   
 
@@ -331,6 +331,185 @@
       
   
   
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Serviços de rede
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Serviços de rede
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DHCP-dnsmasq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DHCP dnsmasq
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Proxy-Squid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Proxy Squid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Samba
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Samba
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Squid-ACLS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ACLS squid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
     
     
@@ -342,10 +521,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -356,8 +535,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
           </label>
@@ -534,23 +713,21 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -561,8 +738,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Utilitários redes
           </label>
@@ -572,138 +749,13 @@
                 
   
   
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    DHCP dnsmasq
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    DHCP dnsmasq
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#configurando-um-sevidor-dhcp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configurando um sevidor DHCP
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
   
     <li class="md-nav__item">
-      <a href="../NMAP/" class="md-nav__link">
+      <a href="../../Utilit%C3%A1rios-redes/NMAP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
     NMAP
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Proxy-Squid/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Proxy Squid
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Samba-ad-dc/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Samba ad dc
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Squid-ACLS/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    ACLS squid
   </span>
   
 
@@ -735,10 +787,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -749,8 +801,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Virtualização e Automação
           </label>
@@ -848,9 +900,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configurando-um-sevidor-dhcp" class="md-nav__link">
+  <a href="#instalacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurando um sevidor DHCP
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
     </span>
   </a>
   
@@ -871,65 +932,24 @@
                   
 
 
-  <h1>DHCP dnsmasq</h1>
+  <h1>Samba</h1>
 
-<h2 id="configurando-um-sevidor-dhcp">Configurando um sevidor DHCP</h2>
-<p>Em um ambiente linux vamos instalar:</p>
+<h2 id="instalacao"><strong>Instalação</strong></h2>
+<p>Nessa primeira etapa e feita as instalações das dependências para o samba.</p>
 <ul>
-<li>dnsmasq</li>
+<li>Samba</li>
+<li>Krb5-config</li>
+<li>smbclient</li>
 </ul>
-<p>1º - Aquivo de configuração do dnsmasq é:</p>
-<pre><code>/etc/dnsmasq.conf
+<h2 id="configuracao"><strong>Configuração</strong></h2>
+<p>Para começar vamos altera o nome da nossa máquina para um domínio, editando o arquivo /etc/hostname</p>
+<pre><code>EX: berlin.alemanha.lab
 </code></pre>
-<p>mas, vamos criar um arquivo (exemplo.conf) no diretório (dnsmasq.d)</p>
-<pre><code>/etc/dnsmasq.d/exemplo.conf
+<p>Após isso, insira seu 'domínio e o primero nome dele' no aquivo /etc/hosts, como e visto na 2º linha.</p>
+<p><a href="https://im.ge/i/CePRt6"><img alt="hosts" src="https://i.im.ge/2023/12/05/CePRt6.hosts.jpg" /></a></p>
+<p>Agora vamos configura o samba usando o seguite comando:</p>
+<pre><code>samba-tool domain provision --use-rfc2307 --interactive
 </code></pre>
-<p>todas as configurações no arquivo(exemplo.conf) vai migra para dnsmasq.conf.</p>
-<p>2º - Editando o arquivo <strong>exemple.conf</strong> a configuração padrão é essa:</p>
-<ul>
-<li>
-<p>interface= nome da interface que vai ser dhcp</p>
-<pre><code>EX: interface= eht1
-</code></pre>
-</li>
-<li>
-<p>dhcp-range=ip inicial , ip final , mascara de rede , tempo que o dispositivo fica com o ip</p>
-<pre><code>EX: dhcp-range= 192.168.1.1, 192.168.1.254 , 255.255.255.0 , 12h
-</code></pre>
-</li>
-<li>
-<p>dhcp-option= option , ip do roteador</p>
-<pre><code>EX: dhcp-option= 3 , 192.168.1.254
-
-    3: Identifica o servidor DNS
-</code></pre>
-</li>
-<li>
-<p>dhcp-option= option , ip do dns  (<strong>Opicional</strong>)</p>
-<pre><code>EX: dhcp-option= 6 , 8.8.8.8
-
-    6: Identifica o servidor DNS
-</code></pre>
-</li>
-<li>
-<p>dhcp-option= option, domínio (<strong>Opicional</strong>)</p>
-<pre><code>EX: dhcp-option= 15, alemanha.lab
-
-    15: Especifica um domínio se caso você esteja em um
-</code></pre>
-</li>
-<li>
-<p>log-facility= caminho/para/o/log</p>
-<pre><code>EX: log-facility= /var/log/dnsmasq.log
-</code></pre>
-</li>
-</ul>
-<p>Ficaria assim:</p>
-<p><a href="https://im.ge/i/xXDWlT"><img alt="Screenshot_2023-12-20_22-05-23" src="https://i.im.ge/2023/12/21/xXDWlT.Screenshot-2023-12-20-22-05-23.jpg" /></a></p>
-<p>Agora e só você está na mesma rede que do servidor DHCP e pedir para receber ip em modo DCHP</p>
-<p>EX no Windows:</p>
-<p><a href="https://im.ge/i/xXI7vf"><img alt="tcp" src="https://i.im.ge/2023/12/21/xXI7vf.tcp.jpg" /></a>
-<a href="https://im.ge/i/xXIISm"><img alt="Screenshot_2023-12-20_22-11-28" src="https://i.im.ge/2023/12/21/xXIISm.Screenshot-2023-12-20-22-11-28.jpg" /></a></p>
 
 
 
