@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Utilit%C3%A1rios-redes/Squid-ACLS/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Servi%C3%A7os%20de%20rede/Proxy-Squid/">
       
       
-        <link rel="prev" href="../Samba-ad-dc/">
+        <link rel="prev" href="../DHCP-dnsmasq/">
       
       
-        <link rel="next" href="../../Virtualiza%C3%A7%C3%A3o%20e%20Automa%C3%A7%C3%A3o/Ansible/">
+        <link rel="next" href="../Samba/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>ACLS squid - Documentações</title>
+        <title>Proxy Squid - Documentações</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#acls-squid" class="md-skip">
+        <a href="#instalando" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ACLS squid
+              Proxy Squid
             
           </span>
         </div>
@@ -331,6 +331,194 @@
       
   
   
+    
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Serviços de rede
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Serviços de rede
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../DHCP-dnsmasq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DHCP dnsmasq
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Proxy Squid
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Proxy Squid
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Samba/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Samba
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Squid-ACLS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ACLS squid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
     
     
@@ -342,10 +530,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -356,8 +544,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
           </label>
@@ -534,23 +722,21 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -561,8 +747,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Utilitários redes
           </label>
@@ -574,27 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DHCP-dnsmasq/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    DHCP dnsmasq
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../NMAP/" class="md-nav__link">
+      <a href="../../Utilit%C3%A1rios-redes/NMAP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,76 +769,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Proxy-Squid/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Proxy Squid
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Samba-ad-dc/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Samba ad dc
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    ACLS squid
-  </span>
-  
-
-      </a>
-      
     </li>
   
 
@@ -700,10 +796,10 @@
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -714,8 +810,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Virtualização e Automação
           </label>
@@ -805,8 +901,41 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configurando
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logs
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -821,67 +950,72 @@
                   
 
 
-<h1 id="acls-squid">ACLS squid</h1>
-<p>Aqui estão todos os tipos de ACLs suportados pelo Squid:</p>
+  <h1>Proxy Squid</h1>
+
+<h2 id="instalando"><strong>Instalando</strong></h2>
+<p>Para instalar o squid no linux utilizamos o comando padrão (Baseados no Debian)</p>
+<pre><code>apt install squid
+</code></pre>
+<p>Durante a instalação será criado várias arquivos e diretórios, entre eles:</p>
+<pre><code>- debian.conf (O nome varia dependendo da distro)
+
+- access.log
+</code></pre>
+<p>Aqui uma ilustração mostrando seus caminhos (Usando o comando <em>tree</em>)</p>
+<p><a href="https://im.ge/i/A8DjpJ"><img alt="Tree-squid" src="https://i.im.ge/2023/11/22/A8DjpJ.Tree-squid.jpg" /></a></p>
+<p><strong>OBS:</strong> Por padrão o squid nega todo o acesso quando é instalado, para desabilitar vá em:</p>
+<pre><code>-   /etc/squid/squid.conf
+</code></pre>
+<p>Proucure a linha que tem <em>http_access <strong>deny</strong> all</em> e troque para <strong>allow</strong> isso vai permitir o acesso para todos os site, desse jeito:</p>
+<p><a href="https://im.ge/i/AK3UI4"><img alt="Screenshot_2023-11-22_19-12-37" src="https://i.im.ge/2023/11/23/AK3UI4.Screenshot-2023-11-22-19-12-37.jpg" /></a></p>
+<p>Ou deixar como está e permita apenas os sites específicos no processo de configuração.</p>
+<h2 id="configurando"><strong>Configurando</strong></h2>
+<p>No <em>'debian.conf'</em> será adicionado nossa acl (Access Control List) o padrão de construção é:</p>
+<pre><code>-     acl NOME_DA_ACL TIPO_DA_ACL parâmetro
+
+    EX: acl exemplo dst www.facebook.com
+</code></pre>
+<p>Existe vários (TIPO_DA_ACL)</p>
+<pre><code>-   dst = O parâmetro sera um host,rede ou domínio ex: www.youtube.com
+
+-   url_regex = O parâmetro sera um nome ou palavras
+
+-   port = O parâmetro sera uma porta ex: 80
+
+-   Para ver mais entre em (ACLS Squid)
+</code></pre>
+<p>O arquivo por padrão vem assim:</p>
+<p><a href="https://im.ge/i/A8LYmY"><img alt="Captura de tela 2023-11-21 213021" src="https://i.im.ge/2023/11/22/A8LYmY.Captura-de-tela-2023-11-21-213021.png" /></a></p>
+<p>Aqui um exemplo de um acl criada:</p>
+<p><a href="https://im.ge/i/A8LfHf"><img alt="Captura de tela 2023-11-21 213400" src="https://i.im.ge/2023/11/22/A8LfHf.Captura-de-tela-2023-11-21-213400.png" /></a></p>
+<p>Neste exemplo o nome da acl é <em>'sites_block'</em>. É para bloquear ou permitir o site o padrão de construção é:</p>
+<pre><code>-   http_access permissão NOME_DA_ACL
+</code></pre>
+<p>Tipos de permissão </p>
+<pre><code>deny: Nega o acesso
+
+allow: Permite o acesso
+</code></pre>
 <ul>
-<li>
-<p><strong>all:</strong> Este ACL permite o acesso a todos os recursos.</p>
-</li>
-<li>
-<p><strong>none:</strong> Este ACL nega o acesso a todos os recursos.</p>
-</li>
-<li>
-<p><strong>src:</strong> Este ACL especifica um host ou rede de origem.</p>
-</li>
-<li>
-<p><strong>dst:</strong> Este ACL especifica um host ou rede de destino.</p>
-</li>
-<li>
-<p><strong>srcdomain:</strong> Este ACL especifica um domínio de origem.</p>
-</li>
-<li>
-<p><strong>dstdomain:</strong> Este ACL especifica um domínio de destino.</p>
-</li>
-<li>
-<p><strong>url:</strong> Este ACL especifica um URL ou intervalo de URLs.</p>
-</li>
-<li>
-<p><strong>url_regex:</strong> Este ACL especifica letras ou palavras</p>
-</li>
-<li>
-<p><strong>port:</strong> Este ACL especifica uma porta ou intervalo de portas.</p>
-</li>
-<li>
-<p><strong>time:</strong> Este ACL especifica um intervalo de tempo.</p>
-</li>
-<li>
-<p><strong>user:</strong> Este ACL especifica um usuário ou grupo de usuários.</p>
-</li>
-<li>
-<p><strong>group:</strong> Este ACL especifica um grupo de usuários.</p>
-</li>
-<li>
-<p><strong>cookie:</strong> Este ACL especifica um cookie ou intervalo de cookies.</p>
-</li>
-<li>
-<p><strong>digest:</strong> Este ACL especifica um digest ou intervalo de digests.</p>
-</li>
-<li>
-<p><strong>header:</strong> Este ACL especifica um cabeçalho HTTP ou intervalo de cabeçalhos HTTP.</p>
-</li>
-<li>
-<p><strong>mime_type:</strong> Este ACL especifica um tipo MIME ou intervalo de tipos MIME.</p>
-</li>
-<li>
-<p><strong>domain:</strong> Este ACL especifica um domínio ou intervalo de domínios.</p>
-</li>
-<li>
-<p><strong>ipset:</strong> Este ACL especifica um conjunto de IPs.</p>
-</li>
-<li>
-<p><strong>external:</strong> Este ACL especifica uma fonte externa, como um banco de dados ou API</p>
-</li>
+<li><strong>NOME_DA_ACL:</strong> Nesse caso foi usado sites_block</li>
 </ul>
+<p>O exemplo ficará assim:</p>
+<p><a href="https://im.ge/i/A8LVA1"><img alt="Captura de tela 2023-11-21 213424" src="https://i.im.ge/2023/11/22/A8LVA1.Captura-de-tela-2023-11-21-213424.png" /></a></p>
+<p>Agora e só ir no navegador e configura o proxy, por padrão: </p>
+<p>1.Abra o navegador.</p>
+<p>2.No menu, selecione Configurações ou Opções.</p>
+<p>3.Na seção Rede, selecione Configurações de proxy.</p>
+<p>4.Marque a caixa Usar um servidor proxy.</p>
+<p>5.Insira o endereço IP do servidor proxy e a porta.</p>
+<p>(Pode variar entres os navegadores)</p>
+<h2 id="logs"><strong>Logs</strong></h2>
+<p>Para verificar os logo e simples, lá em cima vimos o arquivo 'access.log' e onde ele fica, para verificar em tempo real use:</p>
+<pre><code>tail -f /var/log/squid/access.log
+</code></pre>
+<p>OBS: caso queira deixar os logs coloridos use:</p>
+<pre><code>tail -f /var/log/squid/access.log | ccze
+</code></pre>
+<p>so for usa o 'ccze' primeiro verifique se está instalado.</p>
 
 
 
