@@ -931,38 +931,38 @@
 <p>2º - Editando o arquivo <strong>exemple.conf</strong> a configuração padrão é essa:</p>
 <ul>
 <li>
-<p>interface= nome da interface que vai ser dhcp</p>
+<p>Define a interface de rede que vai ser dhcp</p>
 <pre><code>EX: interface= eht1
 </code></pre>
 </li>
 <li>
-<p>dhcp-range=ip inicial , ip final , mascara de rede , tempo que o dispositivo fica com o ip</p>
+<p>Define a faixa de ip   (inicial , ip final , mascara de rede , tempo que o dispositivo fica com o ip)</p>
 <pre><code>EX: dhcp-range= 192.168.1.1, 192.168.1.254 , 255.255.255.0 , 12h
 </code></pre>
 </li>
 <li>
-<p>dhcp-option= option , ip do roteador</p>
+<p>Define um dns </p>
 <pre><code>EX: dhcp-option= 3 , 192.168.1.254
 
     3: Identifica o servidor DNS
 </code></pre>
 </li>
 <li>
-<p>dhcp-option= option , ip do dns  (<strong>Opicional</strong>)</p>
+<p>Define outro dns (<strong>Opicional</strong>)</p>
 <pre><code>EX: dhcp-option= 6 , 8.8.8.8
 
     6: Identifica o servidor DNS
 </code></pre>
 </li>
 <li>
-<p>dhcp-option= option, domínio (<strong>Opicional</strong>)</p>
-<pre><code>EX: dhcp-option= 15, alemanha.lab
+<p>Define um domínio (<strong>Opicional</strong>)</p>
+<pre><code>EX: dhcp-option= 15, nome-domínio
 
     15: Especifica um domínio se caso você esteja em um
 </code></pre>
 </li>
 <li>
-<p>log-facility= caminho/para/o/log</p>
+<p>Informa onde será o log do serviço</p>
 <pre><code>EX: log-facility= /var/log/dnsmasq.log
 </code></pre>
 </li>
