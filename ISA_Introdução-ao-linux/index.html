@@ -365,6 +365,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#diretorios-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diretórios importantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comandos-de-particoes" class="md-nav__link">
     <span class="md-ellipsis">
       Comandos de Partições
@@ -866,6 +875,70 @@
 
               
             
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utilitários Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Utilitários Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Utilit%C3%A1rios-redes/Utilit%C3%A1rios-Web/Google-dorks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google dorks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1111,6 +1184,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#diretorios-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diretórios importantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#comandos-de-particoes" class="md-nav__link">
     <span class="md-ellipsis">
       Comandos de Partições
@@ -1253,7 +1335,6 @@ Ex: grep -e [0-9]{6} ou [a-z]{6}; Em ambas vão mostrar se caso for &gt;= 6 a qu
 
 Ex: grep -e ^[0-9]{6}$ /etc/passwd ; Vai mostrar apenas linhas que possuem 6 caracteres.
 </code></pre>
-<p><strong>():</strong> Cria grupos</p>
 <p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
 <h2 id="informacoes-da-maquina">Informações da máquina</h2>
 <p><strong>init [0,6]:</strong>  off or reboot</p>
@@ -1333,8 +1414,8 @@ e para aumentar o tempo: shutdown +minutos.
 <p>E um sistema de :multitarefa, multiusuário, conexão com outros tipos de sistemas operacionais, segurança quanto a proteção de processos executados na memória RAM e open source(Fonte aberta)</p>
 <p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
 <h2 id="criacao-de-grupo">Criação de grupo</h2>
-<p>**groupadd nomedogrupo: cria grupos</p>
-<p>**groupdel : deleta grupos</p>
+<p><strong>groupadd</strong> nomedogrupo: cria grupos</p>
+<p><strong>groupdel</strong> : deleta grupos</p>
 <p><strong>groupmod nomedogrupo -n novonome :</strong>altera o nome do grupo</p>
 <p><strong>gpasswd -a  usuário  nomedogrupo:</strong> adiciona o usuário ao grupo</p>
 <p><strong>usermod -aG nome_do_grupo nome_do_usuario:</strong> adiciona o usuário no grupo</p>
@@ -1502,7 +1583,6 @@ Gestão de unidade de sistema (Arquivos de configuração que descrevem serviço
 
 -   Oferece recursos de filtragem e formatação além de ajudar na análise e desenvolvimento do sistema.
 </code></pre>
-<p>Journalctl [-b,  --utc,]:</p>
 <p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
 <h2 id="comandos-de-redes">Comandos de Redes</h2>
 <p><strong>ip [a,route] show:</strong> lista as interfaces de rede</p>
@@ -1568,19 +1648,20 @@ K: força o fechamento dos sockets
 <p>ww: Rede de longa distância sem fio (WWAN)</p>
 <p>Placa de rede loopback: É um tipo especial de interface que permite fazer conexões com você mesmo.</p>
 <p>MTU: É o tamanho, em bytes, do maior pacote permissível que pode ser passado pela conexão.</p>
-<p>Diretórios importantes de rede</p>
-<p>/etc/hostname</p>
+<h2 id="diretorios-importantes">Diretórios importantes</h2>
 <p>Armazena o nome da máquina</p>
-<p>/etc/hosts</p>
+<pre><code>/etc/hostname
+</code></pre>
 <p>Mapear ip para nome</p>
-<p>/etc/resolv.conf</p>
+<pre><code>/etc/hosts
+</code></pre>
 <p>Aponta o servidor dns / Configurações com resolução de nome (DNS)</p>
-<p>Domain: Domínio que a máquina está associada</p>
-<p>Search: Como vai proucurar</p>
-<p>/etc/network/interfaces</p>
+<pre><code>/etc/resolv.conf
+</code></pre>
+<p>Search: Especifica onde vai proucurar</p>
 <p>Configurar interfaces da máquina</p>
-<p>/etc/nsswitch.conf</p>
-<p>Uma forma de configurar o dns utilizando arquivos</p>
+<pre><code>/etc/network/interfaces
+</code></pre>
 <p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
 <h2 id="comandos-de-particoes">Comandos de Partições</h2>
 <p><strong>fdisk[-l]:</strong> Criar partições em mbr</p>
