@@ -22,7 +22,7 @@
     
     
       
-        <title>DHCP dnsmasq - Documentações</title>
+        <title>DHCP - Documentações</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#configurando-um-sevidor-dhcp" class="md-skip">
+        <a href="#dhcp" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              DHCP dnsmasq
+              DHCP
             
           </span>
         </div>
@@ -377,12 +377,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    DHCP dnsmasq
+    DHCP
   </span>
   
 
@@ -393,7 +395,7 @@
         
   
   <span class="md-ellipsis">
-    DHCP dnsmasq
+    DHCP
   </span>
   
 
@@ -405,6 +407,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -413,9 +417,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configurando-um-sevidor-dhcp" class="md-nav__link">
+  <a href="#instalacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurando um sevidor DHCP
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teste
     </span>
   </a>
   
@@ -947,6 +969,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -955,9 +979,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#configurando-um-sevidor-dhcp" class="md-nav__link">
+  <a href="#instalacao" class="md-nav__link">
     <span class="md-ellipsis">
-      Configurando um sevidor DHCP
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Teste
     </span>
   </a>
   
@@ -978,14 +1020,13 @@
                   
 
 
-  <h1>DHCP dnsmasq</h1>
-
-<h2 id="configurando-um-sevidor-dhcp">Configurando um sevidor DHCP</h2>
-<p>Em um ambiente linux vamos instalar:</p>
+<h1 id="dhcp">DHCP</h1>
+<h2 id="instalacao">Instalação</h2>
 <ul>
 <li>dnsmasq</li>
 </ul>
-<p>1º - Aquivo de configuração do dnsmasq é:</p>
+<h2 id="configuracao">Configuração</h2>
+<p>1º - Arquivo de configuração do dnsmasq é:</p>
 <pre><code>/etc/dnsmasq.conf
 </code></pre>
 <p>mas, vamos criar um arquivo (exemplo.conf) no diretório (dnsmasq.d)</p>
@@ -1001,28 +1042,22 @@
 </li>
 <li>
 <p>Define a faixa de ip   (inicial , ip final , mascara de rede , tempo que o dispositivo fica com o ip)</p>
-<pre><code>EX: dhcp-range= 192.168.1.1, 192.168.1.254 , 255.255.255.0 , 12h
+<pre><code>EX: dhcp-range= 192.168.1.10, 192.168.1.254 , 255.255.255.0 , 12h
 </code></pre>
 </li>
 <li>
-<p>Define um dns </p>
-<pre><code>EX: dhcp-option= 3 , 192.168.1.254
-
-    3: Identifica o servidor DNS
+<p>Define o gateway da rede</p>
+<pre><code>EX: dhcp-option= 3 , 192.168.1.254  (3: Identifica o Gateway)
 </code></pre>
 </li>
 <li>
 <p>Define outro dns (<strong>Opicional</strong>)</p>
-<pre><code>EX: dhcp-option= 6 , 8.8.8.8
-
-    6: Identifica o servidor DNS
+<pre><code>EX: dhcp-option= 6 , 8.8.8.8  (6: Identifica o servidor DNS)
 </code></pre>
 </li>
 <li>
 <p>Define um domínio (<strong>Opicional</strong>)</p>
-<pre><code>EX: dhcp-option= 15, nome-domínio
-
-    15: Especifica um domínio se caso você esteja em um
+<pre><code>EX: dhcp-option= 15, nome-domínio      (15: Especifica um domínio se caso você esteja em um)
 </code></pre>
 </li>
 <li>
@@ -1030,13 +1065,22 @@
 <pre><code>EX: log-facility= /var/log/dnsmasq.log
 </code></pre>
 </li>
+<li>
+<p>Informa os IPs fixos</p>
+<pre><code>EX:dhcp-host= Ip-da-máquina, Mac-da-máquina
+</code></pre>
+</li>
 </ul>
-<p>Ficaria assim:</p>
-<p><a href="https://im.ge/i/xXDWlT"><img alt="Screenshot_2023-12-20_22-05-23" src="https://i.im.ge/2023/12/21/xXDWlT.Screenshot-2023-12-20-22-05-23.jpg" /></a></p>
-<p>Agora e só você está na mesma rede que do servidor DHCP e pedir para receber ip em modo DCHP</p>
-<p>EX no Windows:</p>
-<p><a href="https://im.ge/i/xXI7vf"><img alt="tcp" src="https://i.im.ge/2023/12/21/xXI7vf.tcp.jpg" /></a>
-<a href="https://im.ge/i/xXIISm"><img alt="Screenshot_2023-12-20_22-11-28" src="https://i.im.ge/2023/12/21/xXIISm.Screenshot-2023-12-20-22-11-28.jpg" /></a></p>
+<p>Exemplo do arquivo de configuração do dnsmasq</p>
+<p><img alt="Alt text" src="../Fotos-DHCP/Foto1.jpg" /></p>
+<p>Esse será o modo de configura no linux (alpine)</p>
+<p>Caminho: /etc/network/interface</p>
+<p><img alt="Alt text" src="../Fotos-DHCP/Foto2.png" /></p>
+<p>É esse no windows</p>
+<p><img alt="Alt text" src="../Fotos-DHCP/Foto3.png" /></p>
+<h2 id="teste">Teste</h2>
+<p><img alt="Alt text" src="../Fotos-DHCP/teste1.png" />
+<img alt="Alt text" src="../Fotos-DHCP/Teste2.jpg" /></p>
 
 
 
