@@ -164,8 +164,6 @@ Utilizados para saídas de comandos
 
     Ex: grep -e ^[0-9]{6}$ /etc/passwd ; Vai mostrar apenas linhas que possuem 6 caracteres.
 
-**():** Cria grupos
-
 **-------------------------------------------------------------------------------------------------------------**
 
 ##   Informações da máquina#
@@ -297,9 +295,9 @@ E um sistema de :multitarefa, multiusuário, conexão com outros tipos de sistem
 ## Criação de grupo
 
 
-**groupadd nomedogrupo: cria grupos
+**groupadd** nomedogrupo: cria grupos
 
-**groupdel : deleta grupos
+**groupdel** : deleta grupos
 
 **groupmod nomedogrupo -n novonome :**altera o nome do grupo
 
@@ -542,7 +540,6 @@ od (-t(Especifica o tipo de saída))  visualizarmos o conteúdo de um arquivo no
 
     -	Oferece recursos de filtragem e formatação além de ajudar na análise e desenvolvimento do sistema.
 
-Journalctl [-b,  --utc,]:
 
 **-------------------------------------------------------------------------------------------------------------**
 
@@ -632,33 +629,25 @@ Placa de rede loopback: É um tipo especial de interface que permite fazer conex
 
 MTU: É o tamanho, em bytes, do maior pacote permissível que pode ser passado pela conexão.
 
-Diretórios importantes de rede
-
-/etc/hostname
+## Diretórios importantes 
 
 Armazena o nome da máquina
 
-/etc/hosts
+    /etc/hostname
 
 Mapear ip para nome
 
-/etc/resolv.conf
+    /etc/hosts
 
 Aponta o servidor dns / Configurações com resolução de nome (DNS)
 
-Domain: Domínio que a máquina está associada
+    /etc/resolv.conf
 
-Search: Como vai proucurar
-
-/etc/network/interfaces
+Search: Especifica onde vai proucurar
 
 Configurar interfaces da máquina
 
-/etc/nsswitch.conf
-
-Uma forma de configurar o dns utilizando arquivos
-
-
+    /etc/network/interfaces
 
 **-------------------------------------------------------------------------------------------------------------**
 

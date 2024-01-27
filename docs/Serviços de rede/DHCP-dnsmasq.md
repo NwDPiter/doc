@@ -1,10 +1,12 @@
-## Configurando um sevidor DHCP
+# DHCP
 
-Em um ambiente linux vamos instalar:
+## Instalação
 
-- dnsmasq
+-   dnsmasq
 
-1º - Aquivo de configuração do dnsmasq é:
+## Configuração
+
+1º - Arquivo de configuração do dnsmasq é:
 
     /etc/dnsmasq.conf
 
@@ -16,44 +18,51 @@ todas as configurações no arquivo(exemplo.conf) vai migra para dnsmasq.conf.
 
 2º - Editando o arquivo **exemple.conf** a configuração padrão é essa:
 
-* interface= nome da interface que vai ser dhcp
+* Define a interface de rede que vai ser dhcp
 
         EX: interface= eht1
 
-* dhcp-range=ip inicial , ip final , mascara de rede , tempo que o dispositivo fica com o ip
+* Define a faixa de ip   (inicial , ip final , mascara de rede , tempo que o dispositivo fica com o ip)
 
-        EX: dhcp-range= 192.168.1.1, 192.168.1.254 , 255.255.255.0 , 12h
+        EX: dhcp-range= 192.168.1.10, 192.168.1.254 , 255.255.255.0 , 12h
 
-* dhcp-option= option , ip do roteador
+* Define o gateway da rede
 
-        EX: dhcp-option= 3 , 192.168.1.254  
+        EX: dhcp-option= 3 , 192.168.1.254  (3: Identifica o Gateway)
 
-            3: Identifica o servidor DNS
+* Define outro dns (**Opicional**)
 
-* dhcp-option= option , ip do dns  (**Opicional**)
+        EX: dhcp-option= 6 , 8.8.8.8  (6: Identifica o servidor DNS)
 
-        EX: dhcp-option= 6 , 8.8.8.8
+* Define um domínio (**Opicional**)
 
-            6: Identifica o servidor DNS
+        EX: dhcp-option= 15, nome-domínio      (15: Especifica um domínio se caso você esteja em um)
 
-* dhcp-option= option, domínio (**Opicional**)
-
-        EX: dhcp-option= 15, alemanha.lab  
-
-            15: Especifica um domínio se caso você esteja em um
-
-* log-facility= caminho/para/o/log
+* Informa onde será o log do serviço
 
         EX: log-facility= /var/log/dnsmasq.log
 
-Ficaria assim:
+* Informa os IPs fixos
 
-[![Screenshot_2023-12-20_22-05-23](https://i.im.ge/2023/12/21/xXDWlT.Screenshot-2023-12-20-22-05-23.jpg)](https://im.ge/i/xXDWlT)
+        EX:dhcp-host= Ip-da-máquina, Mac-da-máquina
+
+Exemplo do arquivo de configuração do dnsmasq
+
+![Alt text](Fotos-DHCP/Foto1.jpg)
+
+Esse será o modo de configura no linux (alpine)
+
+Caminho: /etc/network/interface
+
+![Alt text](Fotos-DHCP/Foto2.png)
+
+É esse no windows
 
 
-Agora e só você está na mesma rede que do servidor DHCP e pedir para receber ip em modo DCHP
+![Alt text](Fotos-DHCP/Foto3.png)
 
-EX no Windows:
 
-[![tcp](https://i.im.ge/2023/12/21/xXI7vf.tcp.jpg)](https://im.ge/i/xXI7vf)
-[![Screenshot_2023-12-20_22-11-28](https://i.im.ge/2023/12/21/xXIISm.Screenshot-2023-12-20-22-11-28.jpg)](https://im.ge/i/xXIISm)
+## Teste
+
+![Alt text](Fotos-DHCP/teste1.png)
+![Alt text](Fotos-DHCP/Teste2.jpg)

@@ -1,6 +1,6 @@
 **OBS**: Essa documentação e para fins didáticos
 
-Utilitarios do NMAP
+Comandos do NMAP
 
 
 Envia um ping para todos da rede e retorna se esta ativo ou não 
@@ -11,7 +11,7 @@ Envia um ping para todos da rede e retorna se esta ativo ou não
 
     Irá enumerar todos os hosts ativos na rede.
 
-Retorna informações sobre os hosts ativos
+Retorna informações se as portas estão abertas
 
     nmap -sS [endereço IP da rede]
 

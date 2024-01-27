@@ -369,11 +369,31 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Servi%C3%A7os%20de%20rede/BIND/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIND
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Servi%C3%A7os%20de%20rede/DHCP-dnsmasq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    DHCP dnsmasq
+    DHCP
   </span>
   
 
@@ -393,7 +413,7 @@
         
   
   <span class="md-ellipsis">
-    Proxy Squid
+    PROXY
   </span>
   
 
@@ -409,11 +429,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Servi%C3%A7os%20de%20rede/Samba/" class="md-nav__link">
+      <a href="../../Servi%C3%A7os%20de%20rede/SAMBA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Samba
+    SAMBA
   </span>
   
 
@@ -774,6 +794,70 @@
 
               
             
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utilitários Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Utilitários Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Utilit%C3%A1rios-redes/Utilit%C3%A1rios-Web/Google-dorks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google dorks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -954,17 +1038,17 @@
 
 <p>E importante a criação do banco de dados para guardar as informações necessarias e importantes do nossosite, para inciar o mysql digite ('mysql' no terminal)</p>
 <h3 id="criacao-do-banco-de-dados">Criação do banco de dados</h3>
-<pre><code>     nome_db=Nome do seu Banco de dados
+<pre><code>     nome_db = Nome do seu Banco de dados
 
      create database nome_db
      character set utf8
      collate utf8_general_ci;
 </code></pre>
 <h3 id="criacao-de-usuario-para-o-banco-de-dados">Criação de usuário para o banco de dados</h3>
-<pre><code>        user=Seu usuário
-        senha=Sua senha
+<pre><code>        user = Seu usuário
+        senha = Sua senha
 
-        crater user ‘user’@’localhost’ identified by ‘senha’;
+        create user ‘user’@’localhost’ identified by ‘senha’;
 </code></pre>
 <h3 id="entregando-privilegios-para-o-usuario">Entregando privilégios para o usuário</h3>
 <pre><code>       grant all privileges on nome_db.* to ‘user’@’localhost’;

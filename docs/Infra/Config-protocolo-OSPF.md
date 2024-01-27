@@ -18,7 +18,7 @@ a etapa 1,2 e 3 ocorre nesse modo.
 
 1º - Define a prioridade do roteador designado (DR), Quanto menor o número do id mais prioridade vai ter.
 
-**DR** = E um roteador central que vai receber informações de outros roteadores e realizar calculos de melhores caminhos,melhores liks de rede ,etc..por fim devolver os resultados a cada roteador.
+**DR** = E um roteador central que vai receber informações de outros roteadores e realizar calculos de melhores caminhos,melhores liks de rede ,etc.. , por fim devolver os resultados a cada roteador.
 
     router-id _._._._ 
 
@@ -62,4 +62,3 @@ Ver as rotas
 
 
 
-## OSPF-IPV6

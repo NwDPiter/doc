@@ -1,6 +1,6 @@
+# PROXY
 
-
-##**Instalando**  
+## Instalação
 
 Para instalar o squid no linux utilizamos o comando padrão (Baseados no Debian)
 
@@ -8,66 +8,64 @@ Para instalar o squid no linux utilizamos o comando padrão (Baseados no Debian)
 
 Durante a instalação será criado várias arquivos e diretórios, entre eles:
 
-    - debian.conf (O nome varia dependendo da distro)
+ - debian.conf (O nome varia dependendo da distro)
 
-    - access.log
+ - access.log
 
-Aqui uma ilustração mostrando seus caminhos (Usando o comando *tree*)
 
-[![Tree-squid](https://i.im.ge/2023/11/22/A8DjpJ.Tree-squid.jpg)](https://im.ge/i/A8DjpJ)
+## Configuração
 
 **OBS:** Por padrão o squid nega todo o acesso quando é instalado, para desabilitar vá em:
 
-    -   /etc/squid/squid.conf
+- /etc/squid/squid.conf
 
 Proucure a linha que tem _http_access **deny** all_ e troque para **allow** isso vai permitir o acesso para todos os site, desse jeito:
 
-[![Screenshot_2023-11-22_19-12-37](https://i.im.ge/2023/11/23/AK3UI4.Screenshot-2023-11-22-19-12-37.jpg)](https://im.ge/i/AK3UI4)
+![Alt text](Fotos-Proxy/Foto1.jpg)
 
 Ou deixar como está e permita apenas os sites específicos no processo de configuração.
 
-## **Configurando**
-
 No *'debian.conf'* será adicionado nossa acl (Access Control List) o padrão de construção é:
 
-    -     acl NOME_DA_ACL TIPO_DA_ACL parâmetro
+-     acl NOME_DA_ACL TIPO_DA_ACL parâmetro
 
-        EX: acl exemplo dst www.facebook.com
+    EX: acl exemplo dst www.facebook.com
 
 Existe vários (TIPO_DA_ACL)
 
-    -   dst = O parâmetro sera um host,rede ou domínio ex: www.youtube.com
+-   dst = O parâmetro sera um host,rede ou domínio ex: www.youtube.com
 
-    -   url_regex = O parâmetro sera um nome ou palavras 
+-   url_regex = O parâmetro sera um nome ou palavras 
 
-    -   port = O parâmetro sera uma porta ex: 80
+-   port = O parâmetro sera uma porta ex: 80
 
-    -   Para ver mais entre em (ACLS Squid)
+-   Para ver mais entre em (ACLS Squid)
 
 O arquivo por padrão vem assim:
 
-[![Captura de tela 2023-11-21 213021](https://i.im.ge/2023/11/22/A8LYmY.Captura-de-tela-2023-11-21-213021.png)](https://im.ge/i/A8LYmY)
+![Alt text](Fotos-Proxy/Foto2.png)
 
-Aqui um exemplo de um acl criada:
+Aqui alguns exemplos de acls criadas:
 
-[![Captura de tela 2023-11-21 213400](https://i.im.ge/2023/11/22/A8LfHf.Captura-de-tela-2023-11-21-213400.png)](https://im.ge/i/A8LfHf)
+![Alt text](Fotos-Proxy/Foto3.jpg)
 
-
-Neste exemplo o nome da acl é *'sites_block'*. É para bloquear ou permitir o site o padrão de construção é:
+Neste exemplo uma das acls é *'sites_block'*. É para bloquear ou permitir o site o padrão de construção é:
 
     -   http_access permissão NOME_DA_ACL
+
+![Alt text](Fotos-Proxy/Foto3.1.jpg)
 
 Tipos de permissão 
 
     deny: Nega o acesso                 
 
-    allow: Permite o acesso
+    allow: Permiti o acesso
 
 * **NOME_DA_ACL:** Nesse caso foi usado sites_block
 
 O exemplo ficará assim:
 
-[![Captura de tela 2023-11-21 213424](https://i.im.ge/2023/11/22/A8LVA1.Captura-de-tela-2023-11-21-213424.png)](https://im.ge/i/A8LVA1)
+![Alt text](Fotos-Proxy/Foto4.png)
 
 Agora e só ir no navegador e configura o proxy, por padrão: 
 
@@ -83,15 +81,14 @@ Agora e só ir no navegador e configura o proxy, por padrão:
 
 (Pode variar entres os navegadores)
 
-## **Logs**
 
-Para verificar os logo e simples, lá em cima vimos o arquivo 'access.log' e onde ele fica, para verificar em tempo real use:
 
-    tail -f /var/log/squid/access.log 
 
-OBS: caso queira deixar os logs coloridos use:
+Incluir o(s) nome(s) e o conteúdo do(s) arquivo(s) de configuração.
 
-    tail -f /var/log/squid/access.log | ccze 
+Fazer a configuração de 4 ACLs distintas, conforme a atividade passada em sala de aula.
 
-so for usa o 'ccze' primeiro verifique se está instalado.
+## Teste
 
+![Alt text](Fotos-Proxy/Teste1.jpg) 
+![Alt text](Fotos-Proxy/Teste2.jpg)

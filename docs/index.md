@@ -24,11 +24,15 @@ No momento há apenas sobre
 
     5º - Utilitários de redes
 
-        5.1   NMAP
-        5.2   Proxy_Squid
-        5.3   Samba
-        5.4   Servidor DHCP (dnsmasq)
+        5.1   Proxy_Squid
+        5.2   Samba *
+        5.3   Servidor DHCP (dnsmasq)
+
+    6º Utilitários de redes
         
+        6.1   NMAP
+
+                
 
 
 
