@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Servi%C3%A7os%20de%20rede/SAMBA/">
       
       
-        <link rel="prev" href="../6%C2%BA-%20Configurando%20arquivos/">
+        <link rel="prev" href="../Proxy-Squid/">
       
       
-        <link rel="next" href="../8%C2%BA-%20Em%20caso%20de%20duvidas/">
+        <link rel="next" href="../Squid-ACLS/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>7º Acessado o site - Documentações</title>
+        <title>SAMBA - Documentações</title>
       
     
     
@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#instalacao" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -98,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7º  Acessado o site
+              SAMBA
             
           </span>
         </div>
@@ -326,18 +331,20 @@
       
   
   
+    
+  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -351,7 +358,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Serviços de rede
@@ -364,7 +371,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Servi%C3%A7os%20de%20rede/BIND/" class="md-nav__link">
+      <a href="../BIND/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -384,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Servi%C3%A7os%20de%20rede/DHCP-dnsmasq/" class="md-nav__link">
+      <a href="../DHCP-dnsmasq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -404,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Servi%C3%A7os%20de%20rede/Proxy-Squid/" class="md-nav__link">
+      <a href="../Proxy-Squid/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,9 +429,27 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Servi%C3%A7os%20de%20rede/SAMBA/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SAMBA
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -433,6 +458,42 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -444,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Servi%C3%A7os%20de%20rede/Squid-ACLS/" class="md-nav__link">
+      <a href="../Squid-ACLS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -469,20 +530,18 @@
       
   
   
-    
-  
   
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -496,7 +555,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Subindo WordPress
@@ -509,7 +568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -569,7 +628,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -589,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -609,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -627,16 +686,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -645,7 +697,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -657,7 +708,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
+      <a href="../../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -926,6 +977,32 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuração
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -939,130 +1016,23 @@
                   
 
 
-  <h1>7º  Acessado o site</h1>
+  <h1>SAMBA</h1>
 
-<p>Insira no browser o domínio que você pôs no arquivo www.conf na sessão de ServerName: </p>
+<h2 id="instalacao"><strong>Instalação</strong></h2>
+<p>Nessa primeira etapa e feita as instalações das dependências para o samba.</p>
 <ul>
-<li>
-<p>Abrirar o site do WordPress e irá pedir:</p>
-<p>OBS: Essa informações foram criadas na etapa 4</p>
-<pre><code>- Nome do bando de dados que foi criado
-
-- Nome do usuário criado para o bando de dados
-
-- E a senha inserida para o usuário na criação do banco de dados
-
-- As outras informações ficam como estão...
-</code></pre>
-</li>
+<li>Samba</li>
+<li>Krb5-config</li>
+<li>smbclient</li>
 </ul>
-<p>Próxima Página</p>
-<pre><code>-  Configurando um usuário(ADM) para logar no site do WordPress
-
-        -  Linha 1
-            Insira o título do site
-
-        -  Linha 2
-            Insira o nome do usuário 'ADM'
-
-        -  Linha 3
-            Insira a senha de login do usuário para o WordPress
-
-        -  Linha 4
-            Insira um E-mail
-
-        -  Linha 5
-            E uma opção para aumentar a seguraça no seu WordPress
-
-        -  Linha 6 
-            Instale o WordPress
-
--   Agora estando na tela de login
-
-        -   Informe o usuário e a senha que foram criadas na página anterior
+<h2 id="configuracao"><strong>Configuração</strong></h2>
+<p>Para começar vamos altera o nome da nossa máquina para um domínio, editando o arquivo /etc/hostname</p>
+<pre><code>EX: berlin.alemanha.lab
 </code></pre>
-<p>Página do Docs:</p>
-<pre><code>Insira no browser o domínio que você pôs no arquivo docs.conf na sessão de ServerName:
-
-    - Abrirar o site do Docs:
-
-        E está pronto pra visualização...
-</code></pre>
-<p>E por fim como analisar os logs de acesso.</p>
-<pre><code>Os logs no linux por padrão ficam em:
-
-     /var/log
-</code></pre>
-<p>Insira no browser o domínio que você pôs no arquivo www.conf na sessão de ServerName: </p>
-<ul>
-<li>
-<p>Abrirar o site do WordPress e irá pedir:</p>
-<p>OBS: Essa informações foram criadas na etapa 4</p>
-<pre><code>- Nome do bando de dados que foi criado
-
-- Nome do usuário criado para o bando de dados
-
-- E a senha inserida para o usuário na criação do banco de dados
-
-- As outras informações ficam como estão...
-</code></pre>
-</li>
-</ul>
-<p>Próxima Página</p>
-<pre><code>-  Configurando um usuário(ADM) para logar no site do WordPress
-
-        -  Linha 1
-            Insira o título do site
-
-        -  Linha 2
-            Insira o nome do usuário 'ADM'
-
-        -  Linha 3
-            Insira a senha de login do usuário para o WordPress
-
-        -  Linha 4
-            Insira um E-mail
-
-        -  Linha 5
-            E uma opção para aumentar a seguraça no seu WordPress
-
-        -  Linha 6 
-            Instale o WordPress
-
--   Agora estando na tela de login
-
-        -   Informe o usuário e a senha que foram criadas na página anterior
-</code></pre>
-<p>Página do Docs:</p>
-<pre><code>Insira no browser o domínio que você pôs no arquivo docs.conf na sessão de ServerName:
-
-    - Abrirar o site do Docs:
-
-        E está pronto pra visualização...
-</code></pre>
-<p>E por fim como analisar os logs de acesso.</p>
-<pre><code>Os logs no linux por padrão ficam em:
-
-     /var/log
-
-Nesse caso como estamos usando o apache2 iremos ver os logs de acesso dele.
-
-    /var/log/apache2/access.log
-
-Para verificar em tempo real utilizaremos o seguinte comando:
-
-    tail -f /var/log/apache2/access.log | ccze
-
-OBS: O ccze e apenas para colorir os log se for usar verifique se está instalado.
-Nesse caso como estamos usando o apache2 iremos ver os logs de acesso dele.
-
-    /var/log/apache2/access.log
-
-Para verificar em tempo real utilizaremos o seguinte comando:
-
-    tail -f /var/log/apache2/access.log | ccze
-
-OBS: O ccze e apenas para colorir os log se for usar verifique se está instalado.
+<p>Após isso, insira seu 'domínio e o primero nome dele' no aquivo /etc/hosts, como e visto na 2º linha.</p>
+<p><a href="https://im.ge/i/CePRt6"><img alt="hosts" src="https://i.im.ge/2023/12/05/CePRt6.hosts.jpg" /></a></p>
+<p>Agora vamos configura o samba usando o seguite comando:</p>
+<pre><code>samba-tool domain provision --use-rfc2307 --interactive
 </code></pre>
 
 

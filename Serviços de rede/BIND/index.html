@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://nwdpiter.github.io/doc/Servi%C3%A7os%20de%20rede/Samba/">
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/Servi%C3%A7os%20de%20rede/BIND/">
       
       
-        <link rel="prev" href="../Proxy-Squid/">
+        <link rel="prev" href="../../Infra/Config_Roteador-e-Switch_Cisco/">
       
       
-        <link rel="next" href="../Squid-ACLS/">
+        <link rel="next" href="../DHCP-dnsmasq/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Samba - Documentações</title>
+        <title>BIND - Documentações</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacao" class="md-skip">
+        <a href="#bind" class="md-skip">
           Skip to content
         </a>
       
@@ -103,7 +103,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Samba
+              BIND
             
           </span>
         </div>
@@ -369,6 +369,75 @@
                 
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    BIND
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    BIND
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#arquivos-principais-configuracao-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arquivos principais (Configuração básica)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
     <li class="md-nav__item">
       <a href="../DHCP-dnsmasq/" class="md-nav__link">
@@ -395,7 +464,7 @@
         
   
   <span class="md-ellipsis">
-    Proxy Squid
+    PROXY
   </span>
   
 
@@ -409,71 +478,17 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Samba
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../SAMBA/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Samba
+    SAMBA
   </span>
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#instalacao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Instalação
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuração
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -956,6 +971,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -964,18 +981,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacao" class="md-nav__link">
+  <a href="#arquivos-principais-configuracao-basica" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalação
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuração
+      Arquivos principais (Configuração básica)
     </span>
   </a>
   
@@ -996,24 +1004,12 @@
                   
 
 
-  <h1>Samba</h1>
-
-<h2 id="instalacao"><strong>Instalação</strong></h2>
-<p>Nessa primeira etapa e feita as instalações das dependências para o samba.</p>
+<h1 id="bind">BIND</h1>
+<p>Instalação</p>
 <ul>
-<li>Samba</li>
-<li>Krb5-config</li>
-<li>smbclient</li>
+<li>BIND9</li>
 </ul>
-<h2 id="configuracao"><strong>Configuração</strong></h2>
-<p>Para começar vamos altera o nome da nossa máquina para um domínio, editando o arquivo /etc/hostname</p>
-<pre><code>EX: berlin.alemanha.lab
-</code></pre>
-<p>Após isso, insira seu 'domínio e o primero nome dele' no aquivo /etc/hosts, como e visto na 2º linha.</p>
-<p><a href="https://im.ge/i/CePRt6"><img alt="hosts" src="https://i.im.ge/2023/12/05/CePRt6.hosts.jpg" /></a></p>
-<p>Agora vamos configura o samba usando o seguite comando:</p>
-<pre><code>samba-tool domain provision --use-rfc2307 --interactive
-</code></pre>
+<h2 id="arquivos-principais-configuracao-basica">Arquivos principais (Configuração básica)</h2>
 
 
 
