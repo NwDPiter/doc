@@ -8,7 +8,6 @@ No momento há apenas sobre
         
         1.1   Docker  
         1.2   Vagrant 
-        1.3   Ansible *
 
     2º- Comandos iniciais do linux
 
@@ -25,8 +24,7 @@ No momento há apenas sobre
     5º - Utilitários de redes
 
         5.1   Proxy_Squid
-        5.2   Samba *
-        5.3   Servidor DHCP (dnsmasq)
+        5.2   Servidor DHCP (dnsmasq)
 
     6º Utilitários de redes
         
