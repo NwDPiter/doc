@@ -14,7 +14,7 @@
         <link rel="prev" href="../DHCP-dnsmasq/">
       
       
-        <link rel="next" href="../SAMBA/">
+        <link rel="next" href="../Squid-ACLS/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -487,26 +487,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../SAMBA/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SAMBA
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1060,7 +1040,7 @@
 <li>/etc/squid/squid.conf</li>
 </ul>
 <p>Proucure a linha que tem <em>http_access <strong>deny</strong> all</em> e troque para <strong>allow</strong> isso vai permitir o acesso para todos os site, desse jeito:</p>
-<p><img alt="Alt text" src="Fotos-Proxy/Foto1.jpg" /></p>
+<p><img alt="Alt text" src="../PROXY-Fotos/Foto1.jpg" /></p>
 <p>Ou deixar como está e permita apenas os sites específicos no processo de configuração.</p>
 <p>No <em>'debian.conf'</em> será adicionado nossa acl (Access Control List) o padrão de construção é:</p>
 <ul>
@@ -1085,13 +1065,13 @@
 </li>
 </ul>
 <p>O arquivo por padrão vem assim:</p>
-<p><img alt="Alt text" src="Fotos-Proxy/Foto2.png" /></p>
+<p><img alt="Alt text" src="../PROXY-Fotos/Foto2.png" /></p>
 <p>Aqui alguns exemplos de acls criadas:</p>
-<p><img alt="Alt text" src="Fotos-Proxy/Foto3.jpg" /></p>
+<p><img alt="Alt text" src="../PROXY-Fotos/Foto3.jpg" /></p>
 <p>Neste exemplo uma das acls é <em>'sites_block'</em>. É para bloquear ou permitir o site o padrão de construção é:</p>
 <pre><code>-   http_access permissão NOME_DA_ACL
 </code></pre>
-<p><img alt="Alt text" src="Fotos-Proxy/Foto3.1.jpg" /></p>
+<p><img alt="Alt text" src="../PROXY-Fotos/Foto3.1.jpg" /></p>
 <p>Tipos de permissão </p>
 <pre><code>deny: Nega o acesso
 
@@ -1101,7 +1081,7 @@ allow: Permiti o acesso
 <li><strong>NOME_DA_ACL:</strong> Nesse caso foi usado sites_block</li>
 </ul>
 <p>O exemplo ficará assim:</p>
-<p><img alt="Alt text" src="Fotos-Proxy/Foto4.png" /></p>
+<p><img alt="Alt text" src="../PROXY-Fotos/Foto4.png" /></p>
 <p>Agora e só ir no navegador e configura o proxy, por padrão: </p>
 <p>1.Abra o navegador.</p>
 <p>2.No menu, selecione Configurações ou Opções.</p>
@@ -1112,8 +1092,8 @@ allow: Permiti o acesso
 <p>Incluir o(s) nome(s) e o conteúdo do(s) arquivo(s) de configuração.</p>
 <p>Fazer a configuração de 4 ACLs distintas, conforme a atividade passada em sala de aula.</p>
 <h2 id="teste">Teste</h2>
-<p><img alt="Alt text" src="Fotos-Proxy/Teste1.jpg" /> 
-<img alt="Alt text" src="Fotos-Proxy/Teste2.jpg" /></p>
+<p><img alt="Alt text" src="../PROXY-Fotos/Teste1.jpg" /> 
+<img alt="Alt text" src="../PROXY-Fotos/Teste2.jpg" /></p>
 
 
 

@@ -21,7 +21,7 @@ Durante a instalação será criado várias arquivos e diretórios, entre eles:
 
 Proucure a linha que tem _http_access **deny** all_ e troque para **allow** isso vai permitir o acesso para todos os site, desse jeito:
 
-![Alt text](Fotos-Proxy/Foto1.jpg)
+![Alt text](PROXY-Fotos/Foto1.jpg)
 
 Ou deixar como está e permita apenas os sites específicos no processo de configuração.
 
@@ -43,17 +43,17 @@ Existe vários (TIPO_DA_ACL)
 
 O arquivo por padrão vem assim:
 
-![Alt text](Fotos-Proxy/Foto2.png)
+![Alt text](PROXY-Fotos/Foto2.png)
 
 Aqui alguns exemplos de acls criadas:
 
-![Alt text](Fotos-Proxy/Foto3.jpg)
+![Alt text](PROXY-Fotos/Foto3.jpg)
 
 Neste exemplo uma das acls é *'sites_block'*. É para bloquear ou permitir o site o padrão de construção é:
 
     -   http_access permissão NOME_DA_ACL
 
-![Alt text](Fotos-Proxy/Foto3.1.jpg)
+![Alt text](PROXY-Fotos/Foto3.1.jpg)
 
 Tipos de permissão 
 
@@ -65,7 +65,7 @@ Tipos de permissão
 
 O exemplo ficará assim:
 
-![Alt text](Fotos-Proxy/Foto4.png)
+![Alt text](PROXY-Fotos/Foto4.png)
 
 Agora e só ir no navegador e configura o proxy, por padrão: 
 
@@ -90,5 +90,5 @@ Fazer a configuração de 4 ACLs distintas, conforme a atividade passada em sala
 
 ## Teste
 
-![Alt text](Fotos-Proxy/Teste1.jpg) 
-![Alt text](Fotos-Proxy/Teste2.jpg)
+![Alt text](PROXY-Fotos/Teste1.jpg) 
+![Alt text](PROXY-Fotos/Teste2.jpg)
