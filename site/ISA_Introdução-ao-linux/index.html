@@ -1,0 +1,1739 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nwdpiter.github.io/doc/ISA_Introdu%C3%A7%C3%A3o-ao-linux/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Infra/Config-protocolo-OSPF/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.10">
+    
+    
+      
+        <title>Introdução ao Linux - Documentações</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fad675c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introducao-ao-linux" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Documentações" class="md-header__button md-logo" aria-label="Documentações" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentações
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introdução ao Linux
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Documentações" class="md-nav__button md-logo" aria-label="Documentações" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Documentações
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Alguns dos meus aprendizados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Introdução ao Linux
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introdução ao Linux
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manipulacao-de-arquivos-ou-diretorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulação de arquivos ou diretórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressoes-regulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      $Expressões Regulares$
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-da-maquina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informações da máquina
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulacao-de-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulação de Programas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diretorios-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      DIRETÓRIOS PRINCIPAIS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criacao-de-grupo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criação de grupo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criacao-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criação de usuário
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alteracao-de-permissao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alteração de permissão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gerenciamento-de-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciamento de processos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-dos-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informações dos processos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-de-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos de Redes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-de-rede" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informações de rede
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diretorios-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diretórios importantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-de-particoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos de Partições
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Infra
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Infra
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Infra/Config-protocolo-OSPF/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config protocolo OSPF
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Infra/Config-protocolo-RIP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config protocolo RIP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Infra/Config_Roteador-e-Switch_Cisco/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Config Roteador e Switch Cisco
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Serviços de rede
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Serviços de rede
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Servi%C3%A7os%20de%20rede/BIND/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BIND
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Servi%C3%A7os%20de%20rede/DHCP-dnsmasq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DHCP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Servi%C3%A7os%20de%20rede/Proxy-Squid/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PROXY
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Servi%C3%A7os%20de%20rede/Squid-ACLS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ACLS squid
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Subindo WordPress
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Subindo WordPress
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subindo-WordPress/1%C2%BA-%20Instalando%20o%20LAMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1º  Instalando o LAMP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subindo-WordPress/2%C2%BA-%20Instalando%20o%20WP-CLI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2º  Instalando o WP CLI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subindo-WordPress/3%C2%BA-%20Configurando%20user%20e%20WP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3º  Configurando user e WP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subindo-WordPress/4%C2%BA-%20Criando%20banco%20de%20dados/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4º  Criando banco de dados
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subindo-WordPress/5%C2%BA-%20Instalando%20o%20Code-Server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5º  Instalando o Code Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subindo-WordPress/6%C2%BA-%20Configurando%20arquivos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6º  Configurando arquivos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subindo-WordPress/7%C2%BA-%20Acessado%20o%20site/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7º  Acessado o site
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Subindo-WordPress/8%C2%BA-%20Em%20caso%20de%20duvidas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Em caso de dúvidas
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utilitários redes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Utilitários redes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Utilit%C3%A1rios-redes/NMAP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NMAP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Utilitários Web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            Utilitários Web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Utilit%C3%A1rios-redes/Utilit%C3%A1rios-Web/Google-dorks/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Google dorks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Virtualização e Automação
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Virtualização e Automação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Virtualiza%C3%A7%C3%A3o%20e%20Automa%C3%A7%C3%A3o/Docker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Virtualiza%C3%A7%C3%A3o%20e%20Automa%C3%A7%C3%A3o/OVAs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OVAs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Virtualiza%C3%A7%C3%A3o%20e%20Automa%C3%A7%C3%A3o/Vagrant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Vagrant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#manipulacao-de-arquivos-ou-diretorios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulação de arquivos ou diretórios
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expressoes-regulares" class="md-nav__link">
+    <span class="md-ellipsis">
+      $Expressões Regulares$
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-da-maquina" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informações da máquina
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#manipulacao-de-programas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Manipulação de Programas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diretorios-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      DIRETÓRIOS PRINCIPAIS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criacao-de-grupo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criação de grupo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criacao-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      Criação de usuário
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alteracao-de-permissao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Alteração de permissão
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gerenciamento-de-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gerenciamento de processos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-dos-processos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informações dos processos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-de-redes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos de Redes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#informacoes-de-rede" class="md-nav__link">
+    <span class="md-ellipsis">
+      Informações de rede
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diretorios-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diretórios importantes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comandos-de-particoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos de Partições
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="introducao-ao-linux">Introdução ao Linux</h1>
+<h2 id="manipulacao-de-arquivos-ou-diretorios">Manipulação de arquivos ou diretórios</h2>
+<p>pipe | : Permite pegar a saída do um comando e direcionar para o próximo</p>
+<p><strong>ls [-l,-t,-S,-r]:</strong> list directory</p>
+<pre><code>-l :list the directory with details
+
+-t: Classificar por data e hora
+
+-S: Ordenar por tamanho de arquivo
+
+-r: Inverte qualquer tipo de classificação
+</code></pre>
+<p><strong>cd :</strong> Usado para acessar outros diretórios</p>
+<p><strong>touch :</strong> cria um arquivo</p>
+<p><strong>mkdir[-p,-m] :</strong> Cria um diretório</p>
+<pre><code>-p: Cria um diretório entre duas pastas existentes
+
+-m: Define as permissões do diretório
+</code></pre>
+<p><strong>pwd :</strong> mostra o caminho do diretório atual</p>
+<p><strong>rm :</strong> remove file’s (-R 'Recursivo' -F 'Executa sem interrupções')</p>
+<p><strong>cd .. :</strong> Volta um diretório</p>
+<p><strong>mv:</strong> move ou renomeia arquivos e diretórios</p>
+<p><strong>diff  [arquivo] [arquivo]:</strong> Faz a comparação entre arquivos</p>
+<p><strong>rmdir :</strong> remove directory</p>
+<p><strong>man comando :</strong> help do comando</p>
+<p><strong>cp nome_do_arquivo + destino/ :</strong> cópia de um lugar para outro</p>
+<p><strong>mv :</strong> Move ou renomeia arquivos de diretórios</p>
+<p><strong>wc [-c,-w,-l] Arquivo :</strong> conta a quantidade de caracteres,palavras e linhas</p>
+<pre><code>-C: caracteres
+
+-W: palavras
+
+-l: linhas
+</code></pre>
+<p><strong>find local de busca -name  nome_do_arquivo:</strong> procurar arquivos no disco rígido por nome</p>
+<p><strong>head:</strong> pega as 10 primeiras linhas (pro padrão,mas pode ser mais) do arquivo</p>
+<pre><code>head -número_linhas local/do/arquivo
+</code></pre>
+<p><strong>tail</strong> pega as 10 ultimas linhas de um arquivo</p>
+<pre><code>tail -número_linhas local/do/arquivo
+</code></pre>
+<p>Utilizados para saídas de comandos</p>
+<pre><code>sort : deixar em ordem alfabética, -r (inverte a ordem alfabética)
+
+nl (number line) : enumera as linha de um arquivo
+
+cut  -d[O que vai separar] -f [posição/coluna]:  Filtra os nomes exato procurado
+
+ln [opção (-b ou -s simbólico)]  caminho nome do link : cria atalhos para files ou directory
+</code></pre>
+<p><strong>echo ‘msg’:</strong> envia uma mensagem para o terminal</p>
+<p><strong>which comando:</strong> procura por comando em diretórios</p>
+<p><strong>./ nome_arquivo:</strong> executa um arquivo</p>
+<pre><code>Verifique se o arquivo tem permissão para executar,se não, altere vendo a sessão de Alteração de permissões
+</code></pre>
+<p><strong>lt:</strong> less than (menor que)</p>
+<p><strong>gt:</strong> greater than (maior que)</p>
+<p><strong>eq:</strong> equal (igual)</p>
+<p><strong>le:</strong> less than or equal (menor ou igual)</p>
+<p><strong>ge:</strong> greater than or equal (maior ou igual)</p>
+<p><strong>nwq:</strong> not equal (não igual)</p>
+<p><strong>read:</strong> ler uma variável</p>
+<p><strong>dd if=origem of=destino bs=:</strong></p>
+<pre><code>if=diretório: Representa o disco a ser copiado
+
+of=diretório: Representa o disco que vai receber a cópia
+
+bs=tamanho disponibilizado para o bloco[M,B,G,T,]
+
+M: Mega  /  B: Bytes  /  G: Giga  /  T: Tera
+</code></pre>
+<p><strong>grep [-E,-R,-r,-i,-l,] padrão  arquivo:</strong> procura linhas com padrões específicos em arquivos de textos</p>
+<pre><code>-E: Quando for utilizar expressões regulares estendidas
+
+-i: Ignora as diferença entre maiúscula e minúscula
+
+-l: Exibe o nome do arquivo ao invés da saindo normal do grep
+
+-r e R: Recursivo
+</code></pre>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="expressoes-regulares">$Expressões Regulares$</h2>
+<p><strong><em>RegEx</em></strong></p>
+<p><strong><em>Busca , válida e substitui</em></strong></p>
+<p><strong><em>Comando relacionado (egrep | grep)</em></strong></p>
+<p><strong>^:</strong> Padrão de começo de linha</p>
+<pre><code>Ex: grep ^r /etc/passwd ; Vai mostrar padrões que começam com r.
+</code></pre>
+<p><strong>$:</strong> Padrão de final de linha</p>
+<pre><code>Ex: grep r$ /etc/passwd ; Vai mostrar padrões que terminam com r.
+</code></pre>
+<p><strong>Asterisco(*) :</strong> Corresponde a nenhum ou vários caracteres antes do *</p>
+<pre><code>Ex: grep ro\*t /etc/passwd ; Vai mostrar essa busca com n termos ‘o’ ou nenhum termo ‘o’.
+</code></pre>
+<p><strong>+ :</strong> Diz que tem uma ou mais caracteres do anterior</p>
+<pre><code>Ex: grep ro+t /etc/passwd ; Vai mostrar apenas se tiver um ou mais caracteres com esse, nunca se não haver nenhum.
+</code></pre>
+<p><strong>?:</strong> Torna o caractere opcional</p>
+<pre><code>Ex: grep ro?t /etc/passwd ; Vai mostrar o que foi encontrado com e sem a letra ‘o’.
+</code></pre>
+<p><strong>Ponto(.):</strong> Pode substituir qualquer caractere de acordo com a quantidade de pontos.</p>
+<pre><code>Ex: grep ro.t /etc/passwd ; Vai  mostrar o que foi encontrado com a palavra root.
+</code></pre>
+<p><strong>[ ]:</strong> Procura por caracteres específicos</p>
+<pre><code>Ex: grep [02] /etc/passwd ; Vai mostrar apenas onde foi encontrado o caractere 0 e 2.
+
+Ex: grep [0-9] ou [a-z] /etc/passwd ; Vai mostrar todos os caracteres entres os que foi escolhido.
+</code></pre>
+<p><strong>[^ ]:</strong> Mostra caracteres o que não está nessa lista</p>
+<pre><code>Ex: grep [^Aa] /etc/passwd ; Vai mostrar tudo que não tenha A e a.
+</code></pre>
+<p><strong>{}:</strong> Multiplica a função anterior</p>
+<pre><code>Ex: grep -e [0]{2} /etc/passwd ; Vai mostrar apenas quando tiver duas ocorrências do caractere 0.
+
+Ex: grep -e [0-9]{6} ou [a-z]{6}; Em ambas vão mostrar se caso for &gt;= 6 a quantidade de caracteres.
+
+Ex: grep -e ^[0-9]{6}$ /etc/passwd ; Vai mostrar apenas linhas que possuem 6 caracteres.
+</code></pre>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="informacoes-da-maquina">Informações da máquina</h2>
+<p><strong>init [0,6]:</strong>  off or reboot</p>
+<pre><code>0: Off machine
+
+6:  Reboot
+</code></pre>
+<p><strong>shutdown [-h,-r] time msg :</strong>  Off or Reboot</p>
+<pre><code>-h: Off machine   -r: Reboot  hh:mm: Hora e minuto que será desligado
+e para aumentar o tempo: shutdown +minutos.
+</code></pre>
+<p><strong>.  -&gt;</strong> Diretório corrente o que vc está agora</p>
+<p><strong>.. -&gt;</strong> Diretório anterior </p>
+<p><strong>sources.list:</strong>  onde fica listado os aplicativos da máquina</p>
+<p><strong>uname -a (lsb_release -a):</strong>  mostra todas as informações sobre o S.O</p>
+<p><strong>time:</strong> mede o tempo de execução de comando</p>
+<p><strong>cal:</strong>  exibe o calendário</p>
+<p><strong>date:</strong>  Vai exibir dia da semana , mês , dia , hora:minuto:segundo , ano e  UTC</p>
+<p><strong>localhost = 127.0.0.1</strong></p>
+<p><strong>sudo :</strong> permite usuários comum executar comandos como administrador</p>
+<p><strong>shadow :</strong> local onde ficam as senhas</p>
+<p><strong>gshadow :</strong> local onde ficam as senhas dos grupos</p>
+<p><strong>su :</strong>  Diz ao sistema qual usuário você quer ser</p>
+<p><strong>Setuid:</strong>  executa um arquivo como se fosse o dono</p>
+<p><strong>Sergid:</strong>  Executa como se fosse um membro do grupo</p>
+<p><strong>Sticky:</strong>  arquivos com esse bit só pode ser apagado pelo próprio dono</p>
+<p><strong>Tipos de arquivos :</strong> d = diretório, l = link simbólico, c = Dispositivo de</p>
+<p>caractere, b = Dispositivo de bloco, s = soquetes, (=) = Pipes</p>
+<p><strong>Shells:</strong> SH,BASH,ASH,ZSH</p>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="manipulacao-de-programas">Manipulação de Programas</h2>
+<ul>
+<li>Comandos de instalação de programas</li>
+</ul>
+<p><strong>sudo apt-get update:</strong>(Ferramenta de pacote) atualiza a lista de pacotes disponíveis para download</p>
+<p><strong>sudo apt-get upgrade:</strong> Atualiza os pacotes e dependências</p>
+<p><strong>apt-cache search nome:</strong> Find package with this name or your description</p>
+<p><strong>sudo apt install pacote:</strong> Instala o pacote desejado e atualiza se já estive no sistema</p>
+<p><strong>dpkg -l:</strong> Lista os pacotes instalados no linux</p>
+<ul>
+<li>Comandos de remoção de programas</li>
+</ul>
+<p><strong>apt-get remove pacote:</strong> Remove o pacote</p>
+<p><strong>apt-get purge pacote:</strong>  Remova completamente o pacote do sistema</p>
+<ul>
+<li>Comandos para baixar da web</li>
+</ul>
+<p>Curl [-o -L -u]: </p>
+<pre><code>o
+</code></pre>
+<p>Wget [-O -r -l -c --limite-rate=vel]:</p>
+<pre><code>-O: Altera o nome do arquivo baixado
+
+-r: Liga o download recursivo
+
+-l: Define o nível de recursividade
+
+-c: Caso interrompido retorna de onde parou
+
+--limite-rate: Define a velocidade de download
+</code></pre>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="diretorios-principais">DIRETÓRIOS PRINCIPAIS</h2>
+<p>/diretório raiz;</p>
+<p>/boot: Kernel do Sistema;</p>
+<p>/proc: Sistema de arquivos virtual de informação do kernel (Armazenar informação sobre os processos)(Criar subdiretórios para cada processo)</p>
+<p>/dev: Arquivos de dispositivo de hardware</p>
+<p>/tmp: Arquivos temporários</p>
+<p>/etc: Arquivos de configuração do sistema</p>
+<p>/bin: Comandos essenciais do sistema</p>
+<p>/mnt: Ponto de montagem temporário para sistemas de arq.</p>
+<p>/opt: Pacotes de software adicional</p>
+<p>/sbin: Comandos essenciais de adm. do sistema;</p>
+<p>/var: Dados variáveis;</p>
+<p>/var/log/syslog: onde fica histórico de eventos ou LOG</p>
+<p>/home: Diretório do usuário</p>
+<p>E um sistema de :multitarefa, multiusuário, conexão com outros tipos de sistemas operacionais, segurança quanto a proteção de processos executados na memória RAM e open source(Fonte aberta)</p>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="criacao-de-grupo">Criação de grupo</h2>
+<p><strong>groupadd</strong> nomedogrupo: cria grupos</p>
+<p><strong>groupdel</strong> : deleta grupos</p>
+<p><strong>groupmod nomedogrupo -n novonome :</strong>altera o nome do grupo</p>
+<p><strong>gpasswd -a  usuário  nomedogrupo:</strong> adiciona o usuário ao grupo</p>
+<p><strong>usermod -aG nome_do_grupo nome_do_usuario:</strong> adiciona o usuário no grupo</p>
+<p><strong>gpasswd -d usuário nomedogrupo:</strong> retira o usuário do grupo</p>
+<p><strong>gpasswd nomedogrupo :</strong> coloca uma senha no grupo</p>
+<p><strong>roups :</strong> mostra o grupos que o usuário está</p>
+<p><strong>newgrp:</strong> carrega as alterações de grupo</p>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="criacao-de-usuario">Criação de usuário</h2>
+<p><strong>useradd</strong> [-m,-s,-c,-g,-G]: cria um usuário</p>
+<pre><code>-m(Cria o diretório home)
+
+-s(Informar o shell do usuário)
+
+-c(Informar um comentário sobre o usuário)
+
+-g(Informar o grupo primário)
+
+-G(Informar o grupo secundário)
+</code></pre>
+<p><strong>useradd -m -s /bin/bash -g nomedogrupo(primário) -G nomedogrupo(sercundário) nomedousuário</strong></p>
+<p><strong>userdel:</strong> remove um usuário</p>
+<p><strong>userdel -r usuários:</strong> apaga o usuário e seu diretório</p>
+<p><strong>usermod nome -l novonome:</strong> altera o nome do usuário</p>
+<p><strong>usermod -g grupo nome:</strong> altera o grupo primário do usuário</p>
+<p><strong>usermod -G (pode ser mais de um grupo) grupo,grupo,grupo usuário:</strong> altera os grupos secundários do usuário</p>
+<p><strong>usermod -d:</strong> Altera o diretório do usuário</p>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<p><strong>id:</strong> mostra informações do usuários autenticado</p>
+<p><strong>Who:</strong> mostra informações de usuários conectados atualmente</p>
+<p><strong>passwd :</strong> configura e altera senhas do usuário (INFORMAÇÕES DO USUÁRIOS)</p>
+<pre><code>passwd [-S] usuário: atribui uma senha para o usuário ou caso já tenha pode alterar
+</code></pre>
+<p><strong>SINTAXE:</strong> Usuário , Status de senha , data , N de dias necessário antes de trocar novamente a senha , N de dias antes da senha expirar , N de dias que o usuário é avisado antes da senha expirar , N de dias que a conta pode fica ativa com a senha expirada</p>
+<pre><code>S: Exibe informações de status sobre sua senha
+
+P: Indica que há senha
+
+L: Indica que a senha está bloqueada
+
+NP: Indica que não há senha
+</code></pre>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="alteracao-de-permissao">Alteração de permissão</h2>
+<p><strong>chmod [permissões] arquivo:</strong> Altera as permissões de um arquivo</p>
+<pre><code>-c(Informar os arquivos modificados)
+
+-v(Descreve as alterações de atributos)
+</code></pre>
+<p><strong>chmod +rwx:</strong> Adiciona permissão</p>
+<pre><code>r = read = ler
+w = write = escrever
+x = executar
+</code></pre>
+<p><strong>chmod -rwx:</strong> Retirar permissões</p>
+<pre><code>se você quer tirar a permissão de executar um arquivo use:
+
+EX: chmod -x nome-do-arquivo
+</code></pre>
+<p><strong>chown novodono.grupo arquivo:</strong>  altera o dono do arquivo</p>
+<p><strong>chgrp novogrupo arquivo :</strong> altera o grupo do arquivo</p>
+<p><strong>644 </strong>: permissão padrão do arquivo</p>
+<p><strong>755 </strong>: permissão padrão do diretório</p>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="gerenciamento-de-processos">Gerenciamento de processos</h2>
+<p>Arquivos relevantes</p>
+<p>cmdline: Guarda a linha de comando usada para iniciar o processo</p>
+<p>environ: mostra as variáveis de ambiente utilizadas pelo processo</p>
+<p>exe: é um link (apontador) para o executável daquele processo</p>
+<p>fd: diretório contendo todos os descritores de arquivo</p>
+<p>limits: as restrições impostas ao processo(/etc/security/limits.conf)</p>
+<p>maps: mapa de memória para os executáveis e bibliotecas</p>
+<p>root: apontador para o diretório raíz do processo</p>
+<p>mounts: informação sobre os sistemas de arquivo</p>
+<p>mem: memória utilizada pelo processo</p>
+<p>sched: informações sobre o escalonador e o escalonamento</p>
+<p>stat: status do processo</p>
+<p>statm: status da memória do processo</p>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="informacoes-dos-processos">Informações dos processos</h2>
+<p><strong>ps [-a,-u,-x,-l,-e, -f]:</strong> lista os programas em execução</p>
+<pre><code>a: Mostra informações de outros usuários
+
+u: Mostra o nome de usuário e a hora de início
+
+x: Mostra os processos não associados ao terminal
+
+l: Mostra com detalhes
+
+e: Mostra todos os processos ativos
+
+f: Mostra com mais detalhes
+</code></pre>
+<p><strong>top [-u, ,-U,-d,-t,]:</strong> mostra todos os processos em execução,sua prioridade varia entre -20(maior prioridade) e 19(menor prioridade)</p>
+<pre><code>-u: Mostra just(apenas) processos de usuários específicos
+
+-U:Não mostra processos de usuário específicos
+
+-d:Não atualiza o monitor a cada segundo
+
+-t: Exibe processo just de terminal especificado
+</code></pre>
+<p><strong>nice -n ajuste comando:</strong> altera a ordem de processo (Usuários normais apenas entre 0 a 19) (root 19 a -20)</p>
+<p><strong>renice +|- new_num_nice [-u, -p, -g] alvos:</strong> altera as prioridades de forma mais específica</p>
+<pre><code>-u: altera as prioridades de processos de um usuário(caso não
+coloque o usuários vai por padrão todos )
+
+-p: por padrão não precisa colocar apenas informar o PID
+
+-g: alterar as prioridades de processos de um grupo
+</code></pre>
+<p><strong>kill:</strong> [opcional] finaliza um processo</p>
+<pre><code>-1:Diz ao processo para desligar ou reiniciar
+
+-2:igual a utilizar o ctrl + c
+
+-3:Interrompe um processo e cria uma back(Arquivo dump)
+
+-9:Finaliza processos obrigatoriamente, com exceção de zumbis
+</code></pre>
+<p>od (-t(Especifica o tipo de saída))  visualizarmos o conteúdo de um arquivo nos formatos hexadecimal, octal, ASCII e nome dos caracteres.</p>
+<pre><code>a(Caracteres)
+
+c(ASCII),
+
+o(Octal),
+
+x(Hexadecimal)
+</code></pre>
+<p><strong>Ctrl + c:</strong> Finaliza um processo</p>
+<p><strong>Ctrl + z:</strong> Suspende um processo</p>
+<p><strong>nome_do_programa &amp;:</strong> executa o programa em BackGround</p>
+<p><strong>bg %[PID]:</strong> Põe o processo em BackGround</p>
+<p><strong>fg %[PID]</strong>: Põe o processo em ForeGround</p>
+<p><strong>jobs [-l]:</strong> mostra os app em bg(BackGround)</p>
+<pre><code>-l: exibe o PID e nome de cada processo
+</code></pre>
+<p><strong>pidof nome_do_processo:</strong> Retorna o pid do processo informando o nome</p>
+<p><strong>uptime [-V]:</strong> Exibe o tempo de funcionamento do sistema e sua carga</p>
+<pre><code>-V: Mostra a versão do comando
+</code></pre>
+<p><strong>free [-m]:</strong> Exibe a quantidade de memória utilizada no sistema</p>
+<pre><code>m: Mostra em megabytes
+</code></pre>
+<p><strong>vmstat:</strong> Exibe as estatísticas do uso da memória virtual</p>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<p><strong>systemd:</strong>  Ele é responsável por iniciar, parar e gerenciar serviços do sistema durante a inicialização e o tempo de execução.</p>
+<pre><code>Funções principais:
+
+Inicialização de serviços durante a inicialização do sistema.
+
+Gerenciamento de serviços em execução
+
+Controle de dependência entre serviços
+
+Monitoramento e inicialização de serviço com falham
+
+Gestão de unidade de sistema (Arquivos de configuração que descrevem serviços, montagem e dispositivos)
+</code></pre>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<p><strong>Journalctl:</strong> É uma ferramenta que faz parte do systemd , utilizada para verificar registros armazenados no systemd  “Systemd Journal”</p>
+<pre><code>Funções principais:
+
+-   Permite pesquisa e visualização de logs do sistema incluindo     mensagens de inicialização, logs do kernel, serviços e muito mais.
+
+-   Oferece recursos de filtragem e formatação além de ajudar na análise e desenvolvimento do sistema.
+</code></pre>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="comandos-de-redes">Comandos de Redes</h2>
+<p><strong>ip [a,route] show:</strong> lista as interfaces de rede</p>
+<pre><code>route: Lista as rotas de redes atuais do sistema
+
+a: Mostra link e addr juntos
+
+-c -br ad:Mostra as interfaces mais detalhados
+</code></pre>
+<p><strong>ping [-c]:</strong> Verifica a conectividade entre dois computadores</p>
+<pre><code>C: Diz quantidades de pacotes
+</code></pre>
+<p>route,netstat -r, ip route show :Lista as rotas de redes atuais do sistema</p>
+<p><strong>tcpdump[-i,-e,-w,-n,-p,-c,-]:</strong> Mostra o tráfego de rede em tempo real</p>
+<pre><code>i: Escolhe a interface
+
+e: Exibe o cabeçalho ethernet completo
+
+w: Grava em um arquivo
+
+n: Não resolve o nome de host
+
+p: Captura apenas tráfegos destinado a máquina
+
+c: Define quantos pacotes deve capturar
+</code></pre>
+<p><strong>traceroute ip:</strong> Rastreia o endereço ip</p>
+<p><strong>arp:</strong> Lista os dispositivos conectados na sua rede</p>
+<p><strong>nslookup:</strong> resolução de nome </p>
+<p><strong>sudo /etc/init.d/networking restart:</strong> Reinicia a interface</p>
+<p><strong>dig:</strong> Resolução de nome (DNS) detalhada</p>
+<p><strong>ss[-t, -u, -s, -a,-n,-r,,-e,-p,-4,-6,-K]:</strong> Mostrar os sockettes(terminal de comunicação)</p>
+<pre><code>t: apenas tcp
+
+u: apenas udp
+
+s: Resumo dos sockets
+
+a: Lista todos os sockets
+
+n: mostra a porta e o ip
+
+r: mostar ip e porta por nome de serviço
+
+e: mostra informações detalhadas dos sockets
+
+p: mostra o processo associado ao ao socket
+
+4: filtra apenas ipv4
+
+6: filtra apenas ipv6
+
+K: força o fechamento dos sockets
+</code></pre>
+<p><strong>sudo ifup nome:</strong> Sobe a interface</p>
+<p><strong>sudo ifdown nome:</strong> Derruba a interface</p>
+<p><strong>nmcli:</strong> usar para criar, exibir, editar, excluir, ativar e desativar conexões de rede, bem como controlar e exibir o status do dispositivo de rede</p>
+<h2 id="informacoes-de-rede">Informações de rede</h2>
+<p>en: Ethernet</p>
+<p>ib: InfiniBand</p>
+<p>sl: Serial line IP (slip)</p>
+<p>wl: Rede de área local sem fio (WLAN)</p>
+<p>ww: Rede de longa distância sem fio (WWAN)</p>
+<p>Placa de rede loopback: É um tipo especial de interface que permite fazer conexões com você mesmo.</p>
+<p>MTU: É o tamanho, em bytes, do maior pacote permissível que pode ser passado pela conexão.</p>
+<h2 id="diretorios-importantes">Diretórios importantes</h2>
+<p>Armazena o nome da máquina</p>
+<pre><code>/etc/hostname
+</code></pre>
+<p>Mapear ip para nome</p>
+<pre><code>/etc/hosts
+</code></pre>
+<p>Aponta o servidor dns / Configurações com resolução de nome (DNS)</p>
+<pre><code>/etc/resolv.conf
+</code></pre>
+<p>Search: Especifica onde vai proucurar</p>
+<p>Configurar interfaces da máquina</p>
+<pre><code>/etc/network/interfaces
+</code></pre>
+<p><strong>-------------------------------------------------------------------------------------------------------------</strong></p>
+<h2 id="comandos-de-particoes">Comandos de Partições</h2>
+<p><strong>fdisk[-l]:</strong> Criar partições em mbr</p>
+<pre><code>l : Lista as partições existentes no disco atual
+</code></pre>
+<p><strong>df[-a,-i,-m,-t,-T,-x]:</strong> Mostra o espaço livre e ocupado das partições</p>
+<pre><code>a: Lista os sistemas de arquivo com zero blocos
+
+i: Informar os inode
+
+m: Lista em MB
+
+`t (tipo): Mostra o tipo específico de sistema de arquivo
+
+T: Exibe o tipo de sistemas listado
+
+x: Especificar o tipo de sistema que não vai aparecer
+</code></pre>
+<p><strong>du[-a,-c,-h]:</strong> Mostra o espaço usados pelos diretórios</p>
+<pre><code>a: Mostra os espaços usados pelos arquivos
+
+c: Mostra o total de espaço usado
+
+h: Exibe formato de tamanho compreensivo ao ser humano
+</code></pre>
+<p>mount: Associar um sistema de arquivos a um diretório específico</p>
+<p>gdisk: Cria partições em gpt</p>
+<p>mkfs: Cria um sistema de arquivo no dispositivo, em uma partição do HD</p>
+<p>fsck: Deve ser utilizado em sistemas de arquivos desmontados. Ele verifica o sistema de arquivo para recuperar dados perdidos ou danificados.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.6c14ae12.min.js"></script>
+      
+    
+  </body>
+</html>
